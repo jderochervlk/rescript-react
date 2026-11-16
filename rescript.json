@@ -6,7 +6,7 @@
   "dependencies": [
     {
       "name": "@rescript/webapi",
-      "features": ["WebAPI.DOM", "WebAPI.History", "WebAPI.Location"]
+      "features": ["WebAPI.DOMTree", "WebAPI.History", "WebAPI.Location"]
     }
   ],
   "sources": [

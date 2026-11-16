@@ -20,56 +20,56 @@ external isCompositeComponentWithType: ('element, React.component<'props>) => bo
 
 module Simulate: {
   @module("react-dom/test-utils") @scope("Simulate")
-  external click: WebAPI.DOM.element => unit = "click"
+  external click: WebAPI.DOMTree.element => unit = "click"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external clickWithEvent: (WebAPI.DOM.element, 'event) => unit = "click"
+  external clickWithEvent: (WebAPI.DOMTree.element, 'event) => unit = "click"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external change: WebAPI.DOM.element => unit = "change"
+  external change: WebAPI.DOMTree.element => unit = "change"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external blur: WebAPI.DOM.element => unit = "blur"
+  external blur: WebAPI.DOMTree.element => unit = "blur"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external changeWithEvent: (WebAPI.DOM.element, 'event) => unit = "change"
+  external changeWithEvent: (WebAPI.DOMTree.element, 'event) => unit = "change"
 
-  let changeWithValue: (WebAPI.DOM.element, string) => unit
-  let changeWithChecked: (WebAPI.DOM.element, bool) => unit
-
-  @module("react-dom/test-utils") @scope("Simulate")
-  external canPlay: WebAPI.DOM.element => unit = "canPlay"
+  let changeWithValue: (WebAPI.DOMTree.element, string) => unit
+  let changeWithChecked: (WebAPI.DOMTree.element, bool) => unit
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external timeUpdate: WebAPI.DOM.element => unit = "timeUpdate"
+  external canPlay: WebAPI.DOMTree.element => unit = "canPlay"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external ended: WebAPI.DOM.element => unit = "ended"
+  external timeUpdate: WebAPI.DOMTree.element => unit = "timeUpdate"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external focus: WebAPI.DOM.element => unit = "focus"
+  external ended: WebAPI.DOMTree.element => unit = "ended"
+
+  @module("react-dom/test-utils") @scope("Simulate")
+  external focus: WebAPI.DOMTree.element => unit = "focus"
 }
 
 module DOM: {
   @return(nullable) @get
-  external value: WebAPI.DOM.element => option<string> = "value"
+  external value: WebAPI.DOMTree.element => option<string> = "value"
 
-  let findBySelector: (WebAPI.DOM.element, string) => option<WebAPI.DOM.element>
-  let findByAllSelector: (WebAPI.DOM.element, string) => array<WebAPI.DOM.element>
+  let findBySelector: (WebAPI.DOMTree.element, string) => option<WebAPI.DOMTree.element>
+  let findByAllSelector: (WebAPI.DOMTree.element, string) => array<WebAPI.DOMTree.element>
 
   let findBySelectorAndTextContent: (
-    WebAPI.DOM.element,
+    WebAPI.DOMTree.element,
     string,
     string,
-  ) => option<WebAPI.DOM.element>
+  ) => option<WebAPI.DOMTree.element>
 
   let findBySelectorAndPartialTextContent: (
-    WebAPI.DOM.element,
+    WebAPI.DOMTree.element,
     string,
     string,
-  ) => option<WebAPI.DOM.element>
+  ) => option<WebAPI.DOMTree.element>
 }
 
-let prepareContainer: (ref<option<WebAPI.DOM.element>>, unit) => unit
-let cleanupContainer: (ref<option<WebAPI.DOM.element>>, unit) => unit
-let getContainer: ref<option<WebAPI.DOM.element>> => WebAPI.DOM.element
+let prepareContainer: (ref<option<WebAPI.DOMTree.element>>, unit) => unit
+let cleanupContainer: (ref<option<WebAPI.DOMTree.element>>, unit) => unit
+let getContainer: ref<option<WebAPI.DOMTree.element>> => WebAPI.DOMTree.element

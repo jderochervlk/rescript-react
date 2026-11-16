@@ -46,12 +46,12 @@ def write_config(fixture, extra_dependencies):
 
 def assert_narrow_inventory():
     library = ROOT / "node_modules" / "@rescript" / "webapi" / "lib" / "bs"
-    for module in ("Element", "Node", "DOMTree", "CSSStyleDeclaration", "Window", "Document", "OffscreenCanvas"):
+    for module in ("Element", "Node", "HTMLCollection", "Event", "Animation", "DOMRect", "MediaQueryList", "Window", "Document", "OffscreenCanvas"):
         if list(library.rglob(f"{module}-WebAPI.cmj")):
             raise RuntimeError(f"Excluded {module} compiler artifact is still present")
     sources = list((library / "src").rglob("*.cmj"))
-    if len(sources) != 6:
-        raise RuntimeError(f"Expected six core/history/location sources, found {len(sources)}")
+    if len(sources) != 15:
+        raise RuntimeError(f"Expected fifteen selective DOM/history/location sources, found {len(sources)}")
 
 
 def require_build(fixture, description):
@@ -68,14 +68,18 @@ def verify(fixture):
     dependency = next(dep for dep in config["dependencies"] if dep["name"] == "@rescript/webapi")
     write_config(fixture, [dependency])
     shutil.copy(ROOT / "benchmarks" / "consumer" / "Interop.res", fixture / "src")
+    shutil.copy(ROOT / "benchmarks" / "consumer" / "CSSCoreInterop.res", fixture / "src")
     require_build(fixture, "narrow WebAPI types interoperate with React")
     window = {"name": "@rescript/webapi", "features": ["WebAPI.Window"]}
     nodes = {"name": "@rescript/webapi", "features": ["WebAPI.DOMNodes"]}
     for name, source, expanded in (
         ("Element", "ExcludedElement.res", nodes),
         ("Node", "ExcludedNode.res", nodes),
-        ("DOMTree", "ExcludedDOMTree.res", nodes),
-        ("CSSStyleDeclaration", "ExcludedCSSStyleDeclaration.res", nodes),
+        ("HTMLCollection", "ExcludedHTMLCollection.res", nodes),
+        ("Event", "ExcludedEvent.res", nodes),
+        ("Animation", "ExcludedAnimation.res", nodes),
+        ("DOMRect", "ExcludedDOMRect.res", nodes),
+        ("MediaQueryList", "ExcludedMediaQueryList.res", nodes),
         ("Window", "ExcludedWindow.res", window),
         ("Document", "ExcludedDocument.res", window),
         ("OffscreenCanvas", "Excluded.res", "@rescript/webapi"),

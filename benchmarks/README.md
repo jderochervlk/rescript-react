@@ -1,5 +1,10 @@
 # WebAPI feature-isolation experiment
 
+This local experimental branch contains a deeper selective alternative. See
+[selective-dom-report.md](selective-dom-report.md) for the recommendation and
+controlled comparisons. The published PRs remain unchanged; the six-module
+report below describes their current version, not this local prototype.
+
 ## Core DOM reduction: current PR #1
 
 PR #1 now includes the core type reduction, using
