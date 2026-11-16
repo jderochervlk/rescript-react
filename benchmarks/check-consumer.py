@@ -46,9 +46,12 @@ def write_config(fixture, extra_dependencies):
 
 def assert_narrow_inventory():
     library = ROOT / "node_modules" / "@rescript" / "webapi" / "lib" / "bs"
-    for module in ("Window", "Document", "OffscreenCanvas"):
+    for module in ("Element", "Node", "DOMTree", "CSSStyleDeclaration", "Window", "Document", "OffscreenCanvas"):
         if list(library.rglob(f"{module}-WebAPI.cmj")):
             raise RuntimeError(f"Excluded {module} compiler artifact is still present")
+    sources = list((library / "src").rglob("*.cmj"))
+    if len(sources) != 6:
+        raise RuntimeError(f"Expected six core/history/location sources, found {len(sources)}")
 
 
 def require_build(fixture, description):
@@ -67,13 +70,19 @@ def verify(fixture):
     shutil.copy(ROOT / "benchmarks" / "consumer" / "Interop.res", fixture / "src")
     require_build(fixture, "narrow WebAPI types interoperate with React")
     window = {"name": "@rescript/webapi", "features": ["WebAPI.Window"]}
+    nodes = {"name": "@rescript/webapi", "features": ["WebAPI.DOMNodes"]}
     for name, source, expanded in (
+        ("Element", "ExcludedElement.res", nodes),
+        ("Node", "ExcludedNode.res", nodes),
+        ("DOMTree", "ExcludedDOMTree.res", nodes),
+        ("CSSStyleDeclaration", "ExcludedCSSStyleDeclaration.res", nodes),
         ("Window", "ExcludedWindow.res", window),
         ("Document", "ExcludedDocument.res", window),
         ("OffscreenCanvas", "Excluded.res", "@rescript/webapi"),
     ):
         verify_exclusion(fixture, dependency, name, source, expanded)
-    verify_window_consumer(fixture, dependency, window)
+    verify_broad_consumer(fixture, dependency, nodes, "DOMNodesInterop.res")
+    verify_broad_consumer(fixture, dependency, window, "WindowInterop.res")
 
 
 def verify_exclusion(fixture, dependency, module, source, expanded):
@@ -93,16 +102,16 @@ def verify_exclusion(fixture, dependency, module, source, expanded):
     assert_narrow_inventory()
 
 
-def verify_window_consumer(fixture, dependency, window):
-    source = fixture / "src" / "WindowInterop.res"
+def verify_broad_consumer(fixture, dependency, broad, filename):
+    source = fixture / "src" / filename
     shutil.copy(ROOT / "benchmarks" / "consumer" / source.name, source)
     try:
-        write_config(fixture, [window])
-        require_build(fixture, "Window consumer retains Document, Window, History and Location interop")
+        write_config(fixture, [broad])
+        require_build(fixture, f"{filename} retains public type interoperability")
     finally:
         source.unlink()
         write_config(fixture, [dependency])
-    require_build(fixture, "narrow consumer recovers after Window interop check")
+    require_build(fixture, f"narrow consumer recovers after {filename} check")
     assert_narrow_inventory()
 
 

@@ -48,12 +48,27 @@ def selected_features(args):
     return ["WebAPI.Window"] if args.features == "limited" else None
 
 
+def copy_probe(fixture, probe):
+    (fixture / "src").mkdir()
+    shutil.copy(ROOT / "benchmarks" / "probes" / f"{probe}.res", fixture / "src/Probe.res")
+    config = {
+        "name": "webapi-probe",
+        "sources": ["src"],
+        "package-specs": {"module": "esmodule", "in-source": True},
+        "suffix": ".res.js",
+    }
+    (fixture / "rescript.json").write_text(json.dumps(config, indent=2) + "\n")
+
+
 def prepare_fixture(args):
     fixture = ROOT / "node_modules" / ".webapi-benchmark" / args.scenario
     if fixture.exists():
         raise RuntimeError(f"Fixture already exists: {fixture}; choose a new scenario name")
     fixture.mkdir(parents=True)
-    copy_sources(fixture, args.source_ref)
+    if args.probe:
+        copy_probe(fixture, args.probe)
+    else:
+        copy_sources(fixture, args.source_ref)
     config = json.loads((fixture / "rescript.json").read_text())
     config.pop("dependencies", None)
     if args.webapi:
@@ -63,7 +78,7 @@ def prepare_fixture(args):
         ]
     (fixture / "rescript.json").write_text(json.dumps(config, indent=2) + "\n")
     manifest = {
-        "name": "@rescript/react",
+        "name": config["name"],
         "private": True,
         "dependencies": {
             "rescript": VERSIONS[args.compiler],
@@ -98,8 +113,8 @@ def webapi_fingerprint(webapi):
     return hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest()
 
 
-def artifact_counts(fixture, webapi):
-    roots = {"react": fixture}
+def artifact_counts(fixture, webapi, probe=None):
+    roots = {"consumer" if probe else "react": fixture}
     if webapi:
         roots["webapi"] = Path(webapi).resolve()
     return {
@@ -129,7 +144,7 @@ def measure(args, fixture, output):
     clean(compiler, fixture, args.webapi)
     _, warmup = run([compiler, "build"], fixture)
     (output / f"{args.scenario}-warmup.log").write_text(warmup)
-    edited = fixture / "src" / "ReactDOMStyle.res"
+    edited = fixture / "src" / ("Probe.res" if args.probe else "ReactDOMStyle.res")
     original = edited.read_text()
     samples = []
     try:
@@ -173,6 +188,8 @@ def parse_args():
     selection.add_argument("--feature", action="append", help="Select a public feature; repeat to combine")
     parser.add_argument("--runs", type=int, default=5)
     parser.add_argument("--source-ref", help="Read baseline sources/config from this Git revision")
+    parser.add_argument("--webapi-source-ref", help="Declared source revision for a non-Git WebAPI snapshot")
+    parser.add_argument("--probe", choices=("dom", "location", "url", "fetch"), help="Benchmark a tiny non-React consumer")
     args = parser.parse_args()
     if args.runs < 1 or Path(args.scenario).name != args.scenario or args.scenario in (".", ".."):
         parser.error("Use a simple scenario name and a positive run count")
@@ -180,7 +197,21 @@ def parse_args():
         parser.error("Feature selection requires --webapi")
     if args.webapi and args.compiler != "13":
         parser.error("This WebAPI experiment requires compiler 13")
+    if args.probe and (not args.webapi or args.source_ref):
+        parser.error("--probe requires --webapi and cannot be combined with --source-ref")
     return args
+
+
+def webapi_git_metadata(path):
+    result = subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"], cwd=path, capture_output=True, text=True
+    )
+    if result.returncode or Path(result.stdout.strip()).resolve() != Path(path).resolve():
+        return {"webapi_commit": None, "webapi_status": None}
+    return {
+        "webapi_commit": run(["git", "rev-parse", "HEAD"], path)[1].strip(),
+        "webapi_status": run(["git", "status", "--porcelain"], path)[1],
+    }
 
 
 def metadata_for(args, fixture):
@@ -190,6 +221,7 @@ def metadata_for(args, fixture):
         "recorded_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "react_commit": run(["git", "rev-parse", "HEAD"], ROOT)[1].strip(),
         "source_ref": args.source_ref,
+        "probe": args.probe,
         "platform": platform.platform(),
         "cpu_count": os.cpu_count(),
         "node": run(["node", "--version"], ROOT)[1].strip(),
@@ -200,8 +232,8 @@ def metadata_for(args, fixture):
         "config": json.loads((fixture / "rescript.json").read_text()),
     }
     if args.webapi:
-        metadata["webapi_commit"] = run(["git", "rev-parse", "HEAD"], args.webapi)[1].strip()
-        metadata["webapi_status"] = run(["git", "status", "--porcelain"], args.webapi)[1]
+        metadata.update(webapi_git_metadata(args.webapi))
+        metadata["webapi_source_ref"] = args.webapi_source_ref
         metadata["webapi_inputs_sha256"] = webapi_fingerprint(args.webapi)
     return metadata
 
@@ -219,7 +251,7 @@ def main():
         **metadata,
         "samples": samples,
         "summary": summarize(samples),
-        "artifacts": artifact_counts(fixture, args.webapi),
+        "artifacts": artifact_counts(fixture, args.webapi, args.probe),
         "webapi_compiled_modules": compiled_modules(args.webapi),
     }
     (output / f"{args.scenario}.json").write_text(json.dumps(result, indent=2) + "\n")

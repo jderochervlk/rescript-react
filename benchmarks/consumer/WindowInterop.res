@@ -10,5 +10,4 @@ let eventWindow = (event: ReactEvent.UI.t): WebAPI.Window.t => event->ReactEvent
 let history = (window: WebAPI.DOM.window): WebAPI.History.Types.history =>
   window->WebAPI.Window.history
 
-let location = (window: WebAPI.DOM.window): WebAPI.Location.t =>
-  window->WebAPI.Window.location
+let location = (window: WebAPI.DOM.window): WebAPI.Location.t => window->WebAPI.Window.location

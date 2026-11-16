@@ -29,7 +29,7 @@
   },
   "homepage": "https://rescript-lang.org/docs/react/latest/introduction",
   "dependencies": {
-    "@rescript/webapi": "https://codeload.github.com/rescript-lang/experimental-rescript-webapi/tar.gz/625b8687db9f30cd4510584e641bb5718361610f"
+    "@rescript/webapi": "https://codeload.github.com/rescript-lang/experimental-rescript-webapi/tar.gz/acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8"
   },
   "devDependencies": {
     "pkg-pr-new": "^0.0.75",
