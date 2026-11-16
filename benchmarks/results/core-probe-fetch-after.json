@@ -1,0 +1,205 @@
+{
+  "scenario": "core-probe-fetch-after",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-16T16:28:23-0500",
+  "react_commit": "e549ebf4bdd9a3a2da240d077173dc6706bb9ebc",
+  "source_ref": null,
+  "probe": "fetch",
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/experimental-rescript-webapi",
+  "features": [
+    "WebAPI.Fetch"
+  ],
+  "sources": {
+    "src/Probe.res": "c0710491ed86b64ba7931e6ece15c24469d21332346c79b5c676eb1c3ea77081"
+  },
+  "config": {
+    "name": "webapi-probe",
+    "sources": [
+      "src"
+    ],
+    "package-specs": {
+      "module": "esmodule",
+      "in-source": true
+    },
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.Fetch"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": "625b8687db9f30cd4510584e641bb5718361610f",
+  "webapi_status": " M docs/content/docs/api-surface.mdx\n M scripts/check-features.mjs\n M scripts/negative-fixtures.json\n M src/core/DOM.res\n M src/cssom/CSSStyleDeclaration.res\n M src/cssom/MediaList.res\n M src/cssom/StylePropertyMap.res\n M src/cssom/StylePropertyMapReadOnly.res\n M src/cssom/StyleSheet.res\n M src/cssom/StyleSheetList.res\n M src/dom-nodes/DOMTree.res\n M src/dom-nodes/HTMLCollection.res\n M src/dom-platform/DOMStringMap.res\n?? scripts/consumer-dom-core.res\n?? scripts/consumer-dom-element-disabled.res\n?? scripts/consumer-dom-reexports.res\n?? scripts/fixtures/negative/DOMCollectionCannotBeConstructed.res\n?? scripts/fixtures/negative/DOMSlotModeIsDistinct.res\n?? scripts/fixtures/negative/DOMStyleMapCannotBeConstructed.res\n",
+  "webapi_source_ref": null,
+  "webapi_inputs_sha256": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 200.014235,
+      "log": "Cleaned 0/0\nParsed 37 source files\nCompiled 37 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 50.728047,
+      "log": "Cleaned 0/37\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 69.691738,
+      "log": "Cleaned 0/37\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 171.653524,
+      "log": "Cleaned 0/0\nParsed 37 source files\nCompiled 37 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 57.405674,
+      "log": "Cleaned 0/37\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 62.304025,
+      "log": "Cleaned 0/37\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 146.15342,
+      "log": "Cleaned 0/0\nParsed 37 source files\nCompiled 37 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 53.007409,
+      "log": "Cleaned 0/37\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 58.17418,
+      "log": "Cleaned 0/37\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 138.438586,
+      "log": "Cleaned 0/0\nParsed 37 source files\nCompiled 37 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 48.709241,
+      "log": "Cleaned 0/37\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 53.96987,
+      "log": "Cleaned 0/37\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 127.182123,
+      "log": "Cleaned 0/0\nParsed 37 source files\nCompiled 37 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 46.139344,
+      "log": "Cleaned 0/37\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 59.297509,
+      "log": "Cleaned 0/37\nParsed 1 source files\nCompiled 1 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 146.15342,
+      "min_ms": 127.182123,
+      "max_ms": 200.014235,
+      "mean_ms": 156.6883776
+    },
+    "cached": {
+      "median_ms": 50.728047,
+      "min_ms": 46.139344,
+      "max_ms": 57.405674,
+      "mean_ms": 51.197943
+    },
+    "edit": {
+      "median_ms": 59.297509,
+      "min_ms": 53.96987,
+      "max_ms": 69.691738,
+      "mean_ms": 60.6874644
+    }
+  },
+  "artifacts": {
+    "consumer": {
+      ".cmi": 2,
+      ".cmj": 2,
+      ".ast": 2
+    },
+    "webapi": {
+      ".cmi": 74,
+      ".cmj": 74,
+      ".ast": 72
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/event/AbortController-WebAPI.cmj",
+    "src/event/AbortSignal-WebAPI.cmj",
+    "src/event/Event-WebAPI.cmj",
+    "src/event/EventTarget-WebAPI.cmj",
+    "src/event/ExtendableEvent-WebAPI.cmj",
+    "src/fetch/BodyInit-WebAPI.cmj",
+    "src/fetch/Fetch-WebAPI.cmj",
+    "src/fetch/FetchTypes-WebAPI.cmj",
+    "src/fetch/FormData-WebAPI.cmj",
+    "src/fetch/FormDataEntryValue-WebAPI.cmj",
+    "src/fetch/Headers-WebAPI.cmj",
+    "src/fetch/HeadersInit-WebAPI.cmj",
+    "src/fetch/Request-WebAPI.cmj",
+    "src/fetch/Response-WebAPI.cmj",
+    "src/file/BaseFileAndDirectoryEntries-WebAPI.cmj",
+    "src/file/Blob-WebAPI.cmj",
+    "src/file/File-WebAPI.cmj",
+    "src/file/FileAndDirectoryEntriesTypes-WebAPI.cmj",
+    "src/file/FileList-WebAPI.cmj",
+    "src/file/FileSystemDirectoryEntry-WebAPI.cmj",
+    "src/file/FileSystemDirectoryHandle-WebAPI.cmj",
+    "src/file/FileSystemDirectoryReader-WebAPI.cmj",
+    "src/file/FileSystemEntry-WebAPI.cmj",
+    "src/file/FileSystemFileHandle-WebAPI.cmj",
+    "src/file/FileSystemHandle-WebAPI.cmj",
+    "src/file/FileSystemWritableFileStream-WebAPI.cmj",
+    "src/file/FileTypes-WebAPI.cmj",
+    "src/file/ReadableStream-WebAPI.cmj",
+    "src/file/WritableStream-WebAPI.cmj",
+    "src/file/WritableStreamDefaultController-WebAPI.cmj",
+    "src/url/URL-WebAPI.cmj",
+    "src/url/URLSearchParams-WebAPI.cmj",
+    "src/url/UrlTypes-WebAPI.cmj"
+  ]
+}

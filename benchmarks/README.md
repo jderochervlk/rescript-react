@@ -1,8 +1,111 @@
 # WebAPI feature-isolation experiment
 
-## Final setup
+## Core DOM reduction: current PR #1
 
-React now selects **DOMNodes + History + Location**, rather than Window.
+PR #1 now includes the core type reduction, using
+[WebAPI PR #415](https://github.com/rescript-lang/experimental-rescript-webapi/pull/415)
+stacked on the History/Location work in #413. React selects **DOM + History +
+Location**, compiling **6 WebAPI source modules + 9 React source modules = 15**.
+The existing JsxDOM/JsxDOMStyle/JsxEvent aliases remain in this base PR.
+
+WebAPI commit `acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8` moves the concrete element,
+DOM-tree, stylesheet, and supporting collection/style representations into DOM.
+Existing API modules retain representation-preserving aliases and their methods.
+No fields, privacy restrictions, or existing type identities were deliberately
+changed. The two slot-assignment variants remain distinct, and a regression test
+preserves unannotated `DOM.Manual`/`DOM.Named` inference.
+
+### Fresh same-session comparison
+
+Median wall-clock milliseconds, five runs per mode:
+
+| Configuration | WebAPI modules | Clean | Cached no-op | Edit |
+| --- | ---: | ---: | ---: | ---: |
+| #413 library + original React selection | 59 | 182.26 | 49.43 | 75.20 |
+| Core candidate + unchanged React source/selection | 59 | 215.19 | 51.91 | 75.00 |
+| Core candidate + core-only React selection | **6** | **145.13** | **51.87** | **70.78** |
+| Core candidate + unrestricted WebAPI | 338 | 654.73 | 72.11 | 96.19 |
+
+The core-only clean median is **20.4% lower** than the fresh 59-module baseline.
+Cached and edited-build ranges overlap; do not claim a reliable improvement there.
+The counterfactual 59-module candidate is slower, showing that moving records
+alone is not an optimization unless consumers can drop the operation features.
+
+Baseline WebAPI is `625b8687db9f30cd4510584e641bb5718361610f`; baseline React is
+`e549ebf4bdd9a3a2da240d077173dc6706bb9ebc`. The candidate measurements were captured
+before committing the WebAPI change and match the sources now in `acf8d6ce`.
+The recorded fingerprints are:
+
+- Baseline: `cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee`
+- Candidate: `0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972`
+
+Raw timings, ranges, logs, configurations, source hashes and compiled-module
+inventories are in `results/core-baseline-59.json`,
+`results/core-candidate-59.json`, `results/core-candidate-6.json`, and
+`results/core-candidate-all.json`.
+
+### Cost to other core consumers
+
+The shared core is larger: its source grew from roughly 1,030 to 4,561 lines,
+including the existing 425-field style-declaration record. Separate tiny
+non-React consumers show a real cost:
+
+| Probe | WebAPI modules before/after | Clean before | Clean after | Change |
+| --- | ---: | ---: | ---: | ---: |
+| DOM | 3 / 3 | 85.84 ms | 112.51 ms | +31.1% |
+| Location | 4 / 4 | 81.88 ms | 108.37 ms | +32.4% |
+| URL | 6 / 6 | 79.74 ms | 104.07 ms | +30.5% |
+| Fetch | 36 / 36 | 114.60 ms | 146.15 ms | +27.5% |
+
+These are five-run medians, not a universal compiler performance claim. The
+absolute clean overhead is approximately **24–32 ms**. Raw data for clean,
+cached, and edited builds is preserved in `results/core-probe-*-before.json`
+and `results/core-probe-*-after.json`. The WebAPI follow-on is a draft so this
+type-ownership/performance tradeoff can be reviewed before landing.
+
+### Reproduce the core comparison
+
+Use separate local WebAPI folders at the baseline and candidate revisions:
+
+```sh
+python3 benchmarks/builds.py core-before-repeat --compiler 13 \
+  --source-ref e549ebf4bdd9a3a2da240d077173dc6706bb9ebc \
+  --webapi /path/to/webapi-before \
+  --feature WebAPI.DOMNodes --feature WebAPI.History --feature WebAPI.Location
+python3 benchmarks/builds.py core-after-repeat --compiler 13 \
+  --webapi /path/to/webapi-after \
+  --feature WebAPI.DOM --feature WebAPI.History --feature WebAPI.Location
+python3 benchmarks/builds.py core-dom-probe-repeat --compiler 13 \
+  --probe dom --webapi /path/to/webapi-after --feature WebAPI.DOM
+```
+
+Probe choices are `dom`, `location`, `url`, and `fetch`. For a source archive
+rather than a Git checkout, add `--webapi-source-ref <commit>` to record its
+provenance. The harness refuses to mistake an enclosing repository's HEAD for
+the WebAPI revision. Every run also fingerprints the actual source inputs.
+
+### Core reduction validation
+
+- Standalone DOM builds with three sources; the React core selection builds with six.
+- All 30 WebAPI features and the broad re-export consumers compile.
+- Positive fixtures cover recursive fields, all moved record families, generic
+  collections, aliases in both directions, mutation and variant re-exports.
+- Negative fixtures retain private-record restrictions and distinct nominal variants.
+- WebAPI runtime tests, packed consumers, all four Chromium browser tests,
+  formatting, documentation build, and documentation-link checks passed.
+- All 338 emitted WebAPI JavaScript files match the pre-migration output exactly.
+- React's consumer checks reject Element, Node, DOMTree, CSSStyleDeclaration,
+  Window, Document and OffscreenCanvas under the core-only selection; opting
+  into their features restores them and preserves interoperability.
+- Static review's constructor-inference finding was reproduced, fixed, and covered
+  by a regression fixture. Live editor interaction was not manually verified.
+
+The fresh measurements add 60 React-build samples and 120 standalone-probe samples.
+All are separate from the historical measurements below.
+
+## Earlier History/Location-only setup
+
+Before the core reduction, React selected **DOMNodes + History + Location**, rather than Window.
 The profiling runs linked WebAPI from `/home/josh/Dev/experimental-rescript-webapi`.
 Its changes were developed on **`feat/isolate-history-location`**, created directly from
 fetched `origin/main` at `4888db2cc601ad568b76af6ed2add60da0ad96cb`.
@@ -15,8 +118,9 @@ This base change migrates explicit built-in `Dom` types only. It deliberately
 retains the `JsxDOM`, `JsxDOMStyle`, and `JsxEvent` aliases. The separate follow-up
 removes `JsxDOM`; none of the numbers here measure that follow-up.
 
-For portable installation and PR review, `package.json` pins the public WebAPI
-archive at `625b8687db9f30cd4510584e641bb5718361610f`. That pin is not a claim that
+For the first version of this PR, `package.json` pinned the public WebAPI
+archive at `625b8687db9f30cd4510584e641bb5718361610f`; it now pins the core candidate.
+Neither pin is a claim that
 the historical timings used an archive: every WebAPI benchmark below used a
 local folder link, with the exact measured source state recorded separately.
 
@@ -28,7 +132,7 @@ The original branch and local main were not moved.
 Both projects use **ReScript 13.0.0-alpha.7**. WebAPI's peer range is now
 `>=13.0.0-alpha.7 <13.0.0`, preserving main's prerelease-only upper bound.
 
-## Final measurements on main-based WebAPI
+## History/Location-only measurements (preserved)
 
 Median wall-clock milliseconds, **five runs per cell** (minimum–maximum):
 

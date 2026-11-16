@@ -1,25 +1,18 @@
-// Compile-only checks: real WebAPI types flowing into the React bindings.
-let createRootFromElement = (parent: WebAPI.Element.t) =>
-  parent
-  ->WebAPI.Element.querySelector("#root")
-  ->Null.toOption
-  ->Option.map(ReactDOM.Client.createRoot)
-
-let capturePointer = (element: WebAPI.Element.t, event: ReactEvent.Pointer.t) =>
-  element->WebAPI.Element.setPointerCapture(event->ReactEvent.Pointer.pointerId)
+// Core-only consumer: no DOMNodes, CSSOM, or Window operation modules.
+let createRootFromElement = (element: WebAPI.DOM.element) => ReactDOM.Client.createRoot(element)
+let pointerId = (event: ReactEvent.Pointer.t): int => ReactEvent.Pointer.pointerId(event)
 
 let eventWindow = (event: ReactEvent.UI.t): WebAPI.DOM.window => event->ReactEvent.UI.view
 
-let elementWithRef = (ref: ReactDOM.Ref.currentDomRef) =>
-  <div ref={ReactDOM.Ref.domRef(ref)} />
+let elementWithRef = (ref: ReactDOM.Ref.currentDomRef) => <div ref={ReactDOM.Ref.domRef(ref)} />
 
 let elementWithCallbackRef = (ref: ReactDOM.Ref.callbackDomRef) =>
   <div ref={ReactDOM.Ref.callbackDomRef(ref)} />
 
-let findChild = (element: WebAPI.Element.t) =>
+let findChild = (element: WebAPI.DOM.element) =>
   ReactTestUtils.DOM.findBySelector(element, ".child")
 
-let container = (element: WebAPI.Element.t) => {
+let container = (element: WebAPI.DOM.element) => {
   let container = ref(Some(element))
   ReactTestUtils.cleanupContainer(container, ())
 }

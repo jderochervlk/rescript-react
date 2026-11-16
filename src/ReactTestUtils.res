@@ -39,19 +39,19 @@ external isCompositeComponentWithType: ('element, React.component<'props>) => bo
 
 module Simulate = {
   @module("react-dom/test-utils") @scope("Simulate")
-  external click: WebAPI.Element.t => unit = "click"
+  external click: WebAPI.DOM.element => unit = "click"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external clickWithEvent: (WebAPI.Element.t, 'event) => unit = "click"
+  external clickWithEvent: (WebAPI.DOM.element, 'event) => unit = "click"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external change: WebAPI.Element.t => unit = "change"
+  external change: WebAPI.DOM.element => unit = "change"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external blur: WebAPI.Element.t => unit = "blur"
+  external blur: WebAPI.DOM.element => unit = "blur"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external changeWithEvent: (WebAPI.Element.t, 'event) => unit = "change"
+  external changeWithEvent: (WebAPI.DOM.element, 'event) => unit = "change"
 
   let changeWithValue = (element, value) => {
     let event = {
@@ -72,43 +72,43 @@ module Simulate = {
   }
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external canPlay: WebAPI.Element.t => unit = "canPlay"
+  external canPlay: WebAPI.DOM.element => unit = "canPlay"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external timeUpdate: WebAPI.Element.t => unit = "timeUpdate"
+  external timeUpdate: WebAPI.DOM.element => unit = "timeUpdate"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external ended: WebAPI.Element.t => unit = "ended"
+  external ended: WebAPI.DOM.element => unit = "ended"
 
   @module("react-dom/test-utils") @scope("Simulate")
-  external focus: WebAPI.Element.t => unit = "focus"
+  external focus: WebAPI.DOM.element => unit = "focus"
 }
 
 @val external document: WebAPI.DOM.document = "document"
 
 @send
-external querySelector: (WebAPI.Element.t, string) => option<WebAPI.Element.t> = "querySelector"
+external querySelector: (WebAPI.DOM.element, string) => option<WebAPI.DOM.element> = "querySelector"
 
 @send
-external querySelectorAll: (WebAPI.Element.t, string) => Array.arrayLike<WebAPI.Element.t> =
+external querySelectorAll: (WebAPI.DOM.element, string) => Array.arrayLike<WebAPI.DOM.element> =
   "querySelectorAll"
 
-@get external textContent: WebAPI.Element.t => string = "textContent"
-@get external body: WebAPI.DOM.document => option<WebAPI.Element.t> = "body"
+@get external textContent: WebAPI.DOM.element => string = "textContent"
+@get external body: WebAPI.DOM.document => option<WebAPI.DOM.element> = "body"
 
 @send
-external createElement: (WebAPI.DOM.document, string) => WebAPI.Element.t = "createElement"
+external createElement: (WebAPI.DOM.document, string) => WebAPI.DOM.element = "createElement"
 
-@send external remove: WebAPI.Element.t => unit = "remove"
+@send external remove: WebAPI.DOM.element => unit = "remove"
 
 @send
-external appendChild: (WebAPI.Element.t, WebAPI.Element.t) => WebAPI.Element.t = "appendChild"
+external appendChild: (WebAPI.DOM.element, WebAPI.DOM.element) => WebAPI.DOM.element = "appendChild"
 
 let querySelectorAll = (element, string) => Array.fromArrayLike(querySelectorAll(element, string))
 
 module DOM = {
   @return(nullable) @get
-  external value: WebAPI.Element.t => option<string> = "value"
+  external value: WebAPI.DOM.element => option<string> = "value"
 
   let findBySelector = (element, selector) => querySelector(element, selector)
 
@@ -123,7 +123,7 @@ module DOM = {
     )
 }
 
-let prepareContainer = (container: ref<option<WebAPI.Element.t>>, ()) => {
+let prepareContainer = (container: ref<option<WebAPI.DOM.element>>, ()) => {
   let containerElement = document->createElement("div")
   switch document->body {
   | Some(body) => body->appendChild(containerElement)->ignore
@@ -132,7 +132,7 @@ let prepareContainer = (container: ref<option<WebAPI.Element.t>>, ()) => {
   container := Some(containerElement)
 }
 
-let cleanupContainer = (container: ref<option<WebAPI.Element.t>>, ()) => {
+let cleanupContainer = (container: ref<option<WebAPI.DOM.element>>, ()) => {
   switch container.contents {
   | Some(contents) => remove(contents)
   | None => ()

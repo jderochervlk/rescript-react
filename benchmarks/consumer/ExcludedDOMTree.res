@@ -1,0 +1,1 @@
+module DOMTree = WebAPI.DOMTree

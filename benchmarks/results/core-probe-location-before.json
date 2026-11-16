@@ -1,0 +1,173 @@
+{
+  "scenario": "core-probe-location-before",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-16T16:28:12-0500",
+  "react_commit": "e549ebf4bdd9a3a2da240d077173dc6706bb9ebc",
+  "source_ref": null,
+  "probe": "location",
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/rescript-react/.delta/worktrees/jsswxvp74w80/rescript-react/node_modules/.webapi-core-baseline",
+  "features": [
+    "WebAPI.Location"
+  ],
+  "sources": {
+    "src/Probe.res": "c03969dff086365a2b3a11c6ce3d978998b28b3dfa69a72302c7cc040319e915"
+  },
+  "config": {
+    "name": "webapi-probe",
+    "sources": [
+      "src"
+    ],
+    "package-specs": {
+      "module": "esmodule",
+      "in-source": true
+    },
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.Location"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": null,
+  "webapi_status": null,
+  "webapi_source_ref": "625b8687db9f30cd4510584e641bb5718361610f",
+  "webapi_inputs_sha256": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 84.122304,
+      "log": "Cleaned 0/0\nParsed 5 source files\nCompiled 5 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 40.921058,
+      "log": "Cleaned 0/5\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 55.720191,
+      "log": "Cleaned 0/5\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 81.002451,
+      "log": "Cleaned 0/0\nParsed 5 source files\nCompiled 5 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 41.398111,
+      "log": "Cleaned 0/5\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 68.886925,
+      "log": "Cleaned 0/5\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 81.875112,
+      "log": "Cleaned 0/0\nParsed 5 source files\nCompiled 5 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 57.594488,
+      "log": "Cleaned 0/5\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 65.40134,
+      "log": "Cleaned 0/5\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 92.9851,
+      "log": "Cleaned 0/0\nParsed 5 source files\nCompiled 5 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 54.676361,
+      "log": "Cleaned 0/5\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 73.444372,
+      "log": "Cleaned 0/5\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 75.137274,
+      "log": "Cleaned 0/0\nParsed 5 source files\nCompiled 5 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 45.723182,
+      "log": "Cleaned 0/5\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 60.164612,
+      "log": "Cleaned 0/5\nParsed 1 source files\nCompiled 1 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 81.875112,
+      "min_ms": 75.137274,
+      "max_ms": 92.9851,
+      "mean_ms": 83.0244482
+    },
+    "cached": {
+      "median_ms": 45.723182,
+      "min_ms": 40.921058,
+      "max_ms": 57.594488,
+      "mean_ms": 48.06264
+    },
+    "edit": {
+      "median_ms": 65.40134,
+      "min_ms": 55.720191,
+      "max_ms": 73.444372,
+      "mean_ms": 64.723488
+    }
+  },
+  "artifacts": {
+    "consumer": {
+      ".cmi": 2,
+      ".cmj": 2,
+      ".ast": 2
+    },
+    "webapi": {
+      ".cmi": 10,
+      ".cmj": 10,
+      ".ast": 8
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/location/Location-WebAPI.cmj"
+  ]
+}
