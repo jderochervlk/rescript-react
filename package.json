@@ -28,14 +28,17 @@
     "url": "git+https://github.com/rescript-lang/rescript-react.git"
   },
   "homepage": "https://rescript-lang.org/docs/react/latest/introduction",
+  "dependencies": {
+    "@rescript/webapi": "https://codeload.github.com/rescript-lang/experimental-rescript-webapi/tar.gz/625b8687db9f30cd4510584e641bb5718361610f"
+  },
   "devDependencies": {
     "pkg-pr-new": "^0.0.75",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "rescript": "^13.0.0-alpha.5"
+    "rescript": "13.0.0-alpha.7"
   },
   "peerDependencies": {
-    "@rescript/runtime": ">=13.0.0-alpha.5",
+    "@rescript/runtime": ">=13.0.0-alpha.7",
     "react": ">=19.2.0",
     "react-dom": ">=19.2.0"
   }

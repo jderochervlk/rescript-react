@@ -1,0 +1,249 @@
+{
+  "scenario": "split-narrow",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-16T13:20:04-0500",
+  "react_commit": "bb34644ca803e021e7218a8a63b572705df73701",
+  "source_ref": null,
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/experimental-rescript-webapi",
+  "features": [
+    "WebAPI.DOMNodes",
+    "WebAPI.History",
+    "WebAPI.Location"
+  ],
+  "sources": {
+    "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+    "src/ReactDOM.res": "37402488af2bb0249fae6ad9a89df42234e41d0d9f757c75f794395a8eb78cee",
+    "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+    "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+    "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+    "src/ReactEvent.res": "aaf5a83223d1074900b5c6db929bb4f327466edc788882c04db98c9a8f3429b2",
+    "src/ReactEvent.resi": "4850adff8b0645fc9c1e1004adaaa211337609d4990d3dc154465b89059a761a",
+    "src/ReactTestUtils.res": "b1db2f0794c8d2c5cace2a95cb78e401f356454c7a77822e0ff7041c2763bdbf",
+    "src/ReactTestUtils.resi": "be6b5efa38024afa698eac513cf58987d5da22223d5101d04108af1c74cb5059",
+    "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+    "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+    "src/RescriptReactRouter.res": "2df77b3609d86e636f0abf1a2e3cb3e50365b44ca7689254e2b51450df4227a1",
+    "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+  },
+  "config": {
+    "name": "@rescript/react",
+    "jsx": {
+      "version": 4
+    },
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "esmodule",
+        "in-source": true
+      }
+    ],
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.DOMNodes",
+          "WebAPI.History",
+          "WebAPI.Location"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": "eb25639f8de1cb3051151caa7eeb4f63efa57d08",
+  "webapi_status": " M docs/content/docs/api-surface.mdx\n M package-lock.json\n M package.json\n M rescript.json\n M scripts/check-features.mjs\n M scripts/check-features.test.mjs\n D src/window/History.res\n D src/window/HistoryTypes.res\n D src/window/Location.res\n M tests/DOMAPI/ImageData__test.res\n?? src/history/\n?? src/location/\n",
+  "webapi_inputs_sha256": "4c0ef66f0aabf7b2a0a9b6c2323d9f3f715b0eb7ee4450d53477e8220cb35ffb",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 240.281719,
+      "log": "Cleaned 0/0\nParsed 68 source files\nCompiled 68 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 52.129725,
+      "log": "Cleaned 0/72\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 86.851429,
+      "log": "Cleaned 0/72\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 172.138543,
+      "log": "Cleaned 0/0\nParsed 68 source files\nCompiled 68 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 54.593308,
+      "log": "Cleaned 0/72\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 67.99176,
+      "log": "Cleaned 0/72\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 169.156145,
+      "log": "Cleaned 0/0\nParsed 68 source files\nCompiled 68 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 48.659496,
+      "log": "Cleaned 0/72\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 77.357209,
+      "log": "Cleaned 0/72\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 148.644462,
+      "log": "Cleaned 0/0\nParsed 68 source files\nCompiled 68 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 50.053055,
+      "log": "Cleaned 0/72\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 68.785757,
+      "log": "Cleaned 0/72\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 225.243562,
+      "log": "Cleaned 0/0\nParsed 68 source files\nCompiled 68 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 53.956762,
+      "log": "Cleaned 0/72\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 76.926633,
+      "log": "Cleaned 0/72\nParsed 1 source files\nCompiled 2 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 172.138543,
+      "min_ms": 148.644462,
+      "max_ms": 240.281719,
+      "mean_ms": 191.0928862
+    },
+    "cached": {
+      "median_ms": 52.129725,
+      "min_ms": 48.659496,
+      "max_ms": 54.593308,
+      "mean_ms": 51.8784692
+    },
+    "edit": {
+      "median_ms": 76.926633,
+      "min_ms": 67.99176,
+      "max_ms": 86.851429,
+      "mean_ms": 75.5825576
+    }
+  },
+  "artifacts": {
+    "react": {
+      ".cmi": 18,
+      ".cmj": 18,
+      ".ast": 18
+    },
+    "webapi": {
+      ".cmi": 120,
+      ".cmj": 120,
+      ".ast": 118
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/animation/Animation-WebAPI.cmj",
+    "src/animation/AnimationEffect-WebAPI.cmj",
+    "src/animation/DocumentTimeline-WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/cssom/CSSRuleList-WebAPI.cmj",
+    "src/cssom/CSSStyleDeclaration-WebAPI.cmj",
+    "src/cssom/CSSStyleValue-WebAPI.cmj",
+    "src/cssom/MediaList-WebAPI.cmj",
+    "src/cssom/MediaQueryList-WebAPI.cmj",
+    "src/cssom/StylePropertyMap-WebAPI.cmj",
+    "src/cssom/StylePropertyMapReadOnly-WebAPI.cmj",
+    "src/cssom/StyleSheet-WebAPI.cmj",
+    "src/cssom/StyleSheetList-WebAPI.cmj",
+    "src/dom-nodes/AbstractRange-WebAPI.cmj",
+    "src/dom-nodes/Attr-WebAPI.cmj",
+    "src/dom-nodes/CDATASection-WebAPI.cmj",
+    "src/dom-nodes/CaretPosition-WebAPI.cmj",
+    "src/dom-nodes/CharacterData-WebAPI.cmj",
+    "src/dom-nodes/Comment-WebAPI.cmj",
+    "src/dom-nodes/DOMImplementation-WebAPI.cmj",
+    "src/dom-nodes/DOMTree-WebAPI.cmj",
+    "src/dom-nodes/DocumentFragment-WebAPI.cmj",
+    "src/dom-nodes/Element-WebAPI.cmj",
+    "src/dom-nodes/ElementInternals-WebAPI.cmj",
+    "src/dom-nodes/HTML-WebAPI.cmj",
+    "src/dom-nodes/HTMLCollection-WebAPI.cmj",
+    "src/dom-nodes/NamedNodeMap-WebAPI.cmj",
+    "src/dom-nodes/Node-WebAPI.cmj",
+    "src/dom-nodes/NodeFilter-WebAPI.cmj",
+    "src/dom-nodes/NodeIterator-WebAPI.cmj",
+    "src/dom-nodes/NodeList-WebAPI.cmj",
+    "src/dom-nodes/ProcessingInstruction-WebAPI.cmj",
+    "src/dom-nodes/Range-WebAPI.cmj",
+    "src/dom-nodes/Selection-WebAPI.cmj",
+    "src/dom-nodes/ShadowRoot-WebAPI.cmj",
+    "src/dom-nodes/StaticRange-WebAPI.cmj",
+    "src/dom-nodes/Text-WebAPI.cmj",
+    "src/dom-nodes/TreeWalker-WebAPI.cmj",
+    "src/dom-platform/DOMException-WebAPI.cmj",
+    "src/dom-platform/DOMStringList-WebAPI.cmj",
+    "src/dom-platform/DOMStringMap-WebAPI.cmj",
+    "src/dom-platform/DOMTokenList-WebAPI.cmj",
+    "src/event/AbortController-WebAPI.cmj",
+    "src/event/AbortSignal-WebAPI.cmj",
+    "src/event/Event-WebAPI.cmj",
+    "src/event/EventTarget-WebAPI.cmj",
+    "src/event/ExtendableEvent-WebAPI.cmj",
+    "src/geometry/DOMMatrix-WebAPI.cmj",
+    "src/geometry/DOMMatrixReadOnly-WebAPI.cmj",
+    "src/geometry/DOMPoint-WebAPI.cmj",
+    "src/geometry/DOMPointReadOnly-WebAPI.cmj",
+    "src/geometry/DOMRect-WebAPI.cmj",
+    "src/geometry/DOMRectList-WebAPI.cmj",
+    "src/geometry/DOMRectReadOnly-WebAPI.cmj",
+    "src/history/History-WebAPI.cmj",
+    "src/history/HistoryTypes-WebAPI.cmj",
+    "src/location/Location-WebAPI.cmj"
+  ]
+}

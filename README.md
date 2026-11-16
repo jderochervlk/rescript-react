@@ -25,6 +25,9 @@ npm install
 npm start
 ```
 
+See [the WebAPI profiling report](benchmarks/README.md) for the built-in DOM
+migration, build measurements, and local-link reproduction commands.
+
 ### Acknowledgements
 
 This project is the next evolution of the original [reason-react](https://github.com/reasonml/reason-react) bindings.

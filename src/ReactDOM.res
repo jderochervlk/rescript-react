@@ -7,7 +7,7 @@
 
 // Helper so that ReactDOM itself doesn't bring any runtime
 @val @return(nullable)
-external querySelector: string => option<Dom.element> = "document.querySelector"
+external querySelector: string => option<WebAPI.Element.t> = "document.querySelector"
 
 module Client = {
   module Root = {
@@ -19,10 +19,10 @@ module Client = {
   }
 
   @module("react-dom/client")
-  external createRoot: Dom.element => Root.t = "createRoot"
+  external createRoot: WebAPI.Element.t => Root.t = "createRoot"
 
   @module("react-dom/client")
-  external hydrateRoot: (Dom.element, React.element) => Root.t = "hydrateRoot"
+  external hydrateRoot: (WebAPI.Element.t, React.element) => Root.t = "hydrateRoot"
 }
 
 // Very rudimentary form data bindings
@@ -72,9 +72,9 @@ module FormData = {
 }
 
 @module("react-dom")
-external createPortal: (React.element, Dom.element) => React.element = "createPortal"
+external createPortal: (React.element, WebAPI.Element.t) => React.element = "createPortal"
 
-external domElementToObj: Dom.element => {..} = "%identity"
+external domElementToObj: WebAPI.Element.t => {..} = "%identity"
 
 type style = ReactDOMStyle.t
 
@@ -82,8 +82,8 @@ type domRef = JsxDOM.domRef
 
 module Ref = {
   type t = domRef
-  type currentDomRef = React.ref<nullable<Dom.element>>
-  type callbackDomRef = nullable<Dom.element> => option<unit => unit>
+  type currentDomRef = React.ref<nullable<WebAPI.Element.t>>
+  type callbackDomRef = nullable<WebAPI.Element.t> => option<unit => unit>
 
   external domRef: currentDomRef => domRef = "%identity"
   external callbackDomRef: callbackDomRef => domRef = "%identity"
