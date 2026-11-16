@@ -15,6 +15,7 @@
     "start": "rescript watch",
     "clean": "rescript clean",
     "format": "rescript format",
+    "test:dom-props": "python3 tests/check-dom-props.py",
     "test": "echo 'tests disabled for now'"
   },
   "keywords": [

@@ -28,6 +28,23 @@ npm start
 See [the WebAPI profiling report](benchmarks/README.md) for the built-in DOM
 migration, build measurements, and local-link reproduction commands.
 
+The intrinsic DOM props and ref types are owned by `ReactDOM`, not by the built-in
+`JsxDOM` module. Use `ReactDOM.domProps`, `ReactDOM.domRef`, and the
+`ReactDOM.Ref` helpers instead of explicitly annotating values with `JsxDOM` types.
+Popover constructors now live here too, for example `ReactDOM.Auto` and `ReactDOM.Toggle`.
+The separate `JsxDOMStyle` and `JsxEvent` aliases are not migrated yet.
+
+Run the DOM props regression checks with Node.js and Python 3 available:
+
+```sh
+npm run test:dom-props
+```
+
+This checks the complete prop surface against the pinned compiler's definitions,
+then builds a disposable consumer with the `JsxDOM` module removed from a private
+runtime copy. It checks JSX and server-rendering behavior, plus rejection of
+invalid props, styles, event handlers, and refs. Shared dependencies are not modified.
+
 ### Acknowledgements
 
 This project is the next evolution of the original [reason-react](https://github.com/reasonml/reason-react) bindings.
