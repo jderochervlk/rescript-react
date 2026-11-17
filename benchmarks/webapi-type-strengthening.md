@@ -1,8 +1,33 @@
 # Core-backed placeholder types
 
-PR #1 now strengthens the following existing bindings without adding WebAPI
+## Initial core-backed pass
+
+PR #1 first strengthened the following existing bindings without adding WebAPI
 features. The selection remains DOMTree + History + Location: **15 WebAPI
-source modules**, plus nine React source modules.
+source modules** for that earlier pass, plus nine React source modules.
+
+## Narrow data-feature integration
+
+[WebAPI PR #416](https://github.com/rescript-lang/experimental-rescript-webapi/pull/416)
+adds independently selectable Touch, DataTransfer, FormData, and FileEntries.
+React now pins `691bc3f20dc5d621d22f5bf9931b4ec086542d5f` and selects the first
+three alongside DOMTree/History/Location. FileEntries is included transitively.
+The resulting selection compiles **27 WebAPI + 9 React = 36 source modules**.
+
+- Clipboard.clipboardData returns `option<WebAPI.DataTransfer.t>`; script-created
+  clipboard events can have absent data.
+- Touch.changedTouches, targetTouches, and touches return `WebAPI.TouchList.t`,
+  not arrays. TouchList.item returns a nullable Touch.
+- ReactDOM.FormData.t aliases `WebAPI.FormData.t`. Existing React helper names,
+  form actions/status, and boxed String/File return variants stay intact.
+- WebAPI's unboxed FormDataEntryValue remains a separate type, not an alias
+  of React's boxed formValue.
+- FileList operations remain outside this selection; select File explicitly
+  when needed. The optional one-module FileList split was not included.
+
+Both public type interoperability and the 27-module inventory are checked by
+the consumer harness. Original benchmarks remain tied to their recorded source
+revisions; the data-feature report records the new integration separately.
 
 | React API | New return type |
 | --- | --- |
@@ -37,9 +62,9 @@ itself a native DOM event.
   feature that includes it). Merely returning the core event type does not
   automatically enable those operations.
 
-## Deliberately deferred placeholders
+## Historical reason for deferring data placeholders
 
-The current WebAPI pin does not isolate all the required types into small public
+The earlier WebAPI pin did not isolate all the required types into small public
 features. Static source-module counts for adding its existing features are:
 
 | Remaining API | Public WebAPI replacement | Required feature | Total WebAPI sources |
@@ -52,7 +77,7 @@ features. Static source-module counts for adding its existing features are:
 These counts include the existing 15-module selection and were calculated from
 the pinned feature graph, not measured as new build timings. A focused upstream
 feature split is preferable to silently broadening PR #1's dependency selection.
-The remaining TODO getters stay unchanged until that scope is agreed.
+That focused upstream split is now implemented in #416 and consumed above.
 
 The full FormData module is not a drop-in replacement: WebAPI uses an unboxed
 string/file union, different argument labels, and raw null returns. React's
