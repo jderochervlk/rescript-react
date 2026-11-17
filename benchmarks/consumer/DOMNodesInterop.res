@@ -9,3 +9,6 @@ let createRootFromElement = (parent: WebAPI.Element.t) =>
 
 let capturePointer = (element: WebAPI.DOMTree.element, event: ReactEvent.Pointer.t) =>
   element->WebAPI.Element.setPointerCapture(event->ReactEvent.Pointer.pointerId)
+
+let cancelNativeEvent = (event: ReactEvent.Mouse.t) =>
+  event->ReactEvent.Mouse.nativeEvent->WebAPI.Event.preventDefault

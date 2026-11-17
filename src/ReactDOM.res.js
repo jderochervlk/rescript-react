@@ -18,7 +18,7 @@ function getString(formData, name) {
 function getFile(formData, name) {
   let value = formData.get(name);
   if (!(value == null) && typeof value !== "string") {
-    return Primitive_option.some(value);
+    return value;
   }
 }
 

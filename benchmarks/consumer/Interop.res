@@ -2,7 +2,7 @@
 let createRootFromElement = (element: WebAPI.DOMTree.element) => ReactDOM.Client.createRoot(element)
 let pointerId = (event: ReactEvent.Pointer.t): int => ReactEvent.Pointer.pointerId(event)
 
-let eventWindow = (event: ReactEvent.UI.t): WebAPI.DOM.window => event->ReactEvent.UI.view
+let eventWindow = (event: ReactEvent.UI.t): option<WebAPI.DOM.window> => event->ReactEvent.UI.view
 
 let elementWithRef = (ref: ReactDOM.Ref.currentDomRef) => <div ref={ReactDOM.Ref.domRef(ref)} />
 

@@ -69,7 +69,9 @@ def verify(fixture):
     write_config(fixture, [dependency])
     shutil.copy(ROOT / "benchmarks" / "consumer" / "Interop.res", fixture / "src")
     shutil.copy(ROOT / "benchmarks" / "consumer" / "CSSCoreInterop.res", fixture / "src")
+    shutil.copy(ROOT / "benchmarks" / "consumer" / "EventInterop.res", fixture / "src")
     require_build(fixture, "narrow WebAPI types interoperate with React")
+    verify_event_types(fixture)
     window = {"name": "@rescript/webapi", "features": ["WebAPI.Window"]}
     nodes = {"name": "@rescript/webapi", "features": ["WebAPI.DOMNodes"]}
     for name, source, expanded in (
@@ -87,6 +89,33 @@ def verify(fixture):
         verify_exclusion(fixture, dependency, name, source, expanded)
     verify_broad_consumer(fixture, dependency, nodes, "DOMNodesInterop.res")
     verify_broad_consumer(fixture, dependency, window, "WindowInterop.res")
+    files = {"name": "@rescript/webapi", "features": ["WebAPI.File"]}
+    verify_broad_consumer(fixture, dependency, files, "FileInterop.res")
+
+
+def verify_event_types(fixture):
+    subprocess.run(
+        ["node", str(ROOT / "benchmarks/consumer/event-runtime.mjs"),
+         str(fixture / "src/EventInterop.res.js")],
+        check=True,
+    )
+    for filename, diagnostic in (
+        ("InvalidEventTarget.res", "eventTarget"),
+        ("InvalidCurrentTarget.res", "option"),
+        ("InvalidView.res", "option"),
+        ("InvalidFile.res", "private"),
+    ):
+        source = fixture / "src" / filename
+        shutil.copy(ROOT / "benchmarks" / "consumer" / filename, source)
+        try:
+            code, log = build(fixture)
+            if code == 0 or diagnostic not in log:
+                raise RuntimeError(f"Expected {filename} to reject the invalid type:\n{log}")
+            print(f"PASS: {filename} rejects the invalid type")
+        finally:
+            source.unlink()
+    require_build(fixture, "narrow consumer recovers after event/file type checks")
+    assert_narrow_inventory()
 
 
 def verify_exclusion(fixture, dependency, module, source, expanded):

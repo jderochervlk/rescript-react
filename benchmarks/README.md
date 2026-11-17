@@ -1,5 +1,9 @@
 # WebAPI feature-isolation experiment
 
+The later [core-backed type strengthening](webapi-type-strengthening.md) keeps
+the 15-module selection but changes public event/file types. Timings below
+remain tied to their recorded revisions, before that additional change.
+
 ## Unchanged React baselines: no WebAPI
 
 Before any WebAPI migration, the same nine React source modules and unchanged
