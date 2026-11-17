@@ -4,6 +4,10 @@ This measures the additional cost of owning React's intrinsic props/ref types
 locally, after the 15-module WebAPI migration in PR #1. It does not measure the
 still-pending removal of `JsxDOMStyle` or `JsxEvent`.
 
+Both source snapshots predate the later [core-backed event/file type
+strengthening](webapi-type-strengthening.md). That follow-up is inherited by
+PR #2, but these timings have not been relabeled as measurements of newer sources.
+
 ## Same-session before/after results
 
 ReScript **13.0.0-alpha.7**. Median wall-clock milliseconds, **10 samples per

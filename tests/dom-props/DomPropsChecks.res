@@ -57,6 +57,15 @@ let beforeToggle = <div onBeforeToggleCapture={event => ReactEvent.Toggle.preven
 let toggleSource = (event: ReactEvent.Toggle.t): option<WebAPI.DOMTree.element> =>
   ReactEvent.Toggle.source(event)
 
+let toggleTarget = (event: ReactEvent.Toggle.t): WebAPI.DOM.eventTarget =>
+  event->ReactEvent.Toggle.target
+
+let toggleCurrentTarget = (event: ReactEvent.Toggle.t): option<WebAPI.DOM.eventTarget> =>
+  event->ReactEvent.Toggle.currentTarget
+
+let toggleNativeEvent = (event: ReactEvent.Toggle.t): WebAPI.DOM.event =>
+  event->ReactEvent.Toggle.nativeEvent
+
 let toggleState = (event: ReactEvent.Toggle.t) => (
   ReactEvent.Toggle.oldState(event),
   ReactEvent.Toggle.newState(event),

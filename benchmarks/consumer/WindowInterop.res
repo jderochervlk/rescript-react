@@ -5,7 +5,7 @@ let createRootFromDocument = (document: WebAPI.DOM.document) =>
   ->Null.toOption
   ->Option.map(ReactDOM.Client.createRoot)
 
-let eventWindow = (event: ReactEvent.UI.t): WebAPI.Window.t => event->ReactEvent.UI.view
+let eventWindow = (event: ReactEvent.UI.t): option<WebAPI.Window.t> => event->ReactEvent.UI.view
 
 let history = (window: WebAPI.DOM.window): WebAPI.History.Types.history =>
   window->WebAPI.Window.history

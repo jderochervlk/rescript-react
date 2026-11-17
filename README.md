@@ -45,6 +45,11 @@ then builds a disposable consumer with the `JsxDOM` module removed from a privat
 runtime copy. It checks JSX and server-rendering behavior, plus rejection of
 invalid props, styles, event handlers, and refs. Shared dependencies are not modified.
 
+Event targets, native events, and FormData files now use WebAPI's core types.
+`currentTarget` and UI/pointer `view` return options to handle absent values.
+See [type migration notes](benchmarks/webapi-type-strengthening.md) for the
+public type changes and remaining feature-isolation work.
+
 ### Acknowledgements
 
 This project is the next evolution of the original [reason-react](https://github.com/reasonml/reason-react) bindings.

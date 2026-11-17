@@ -59,6 +59,13 @@ assert.equal(values.toggleSource({ source: null }), undefined);
 assert.equal(values.toggleSource({}), undefined);
 assert.deepEqual(values.toggleState({ oldState: "closed", newState: "open" }), ["closed", "open"]);
 
+const toggleTarget = new EventTarget();
+const toggleNativeEvent = new Event("toggle");
+assert.equal(values.toggleTarget({ target: toggleTarget }), toggleTarget);
+assert.equal(values.toggleCurrentTarget({ currentTarget: toggleTarget }), toggleTarget);
+assert.equal(values.toggleCurrentTarget({ currentTarget: null }), undefined);
+assert.equal(values.toggleNativeEvent({ nativeEvent: toggleNativeEvent }), toggleNativeEvent);
+
 assert.equal(values.direct.props.id, "direct");
 assert.equal(values.directKeyed.key, "direct-key");
 assert.equal(values.directMany.props.children.length, 2);

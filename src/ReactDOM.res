@@ -28,7 +28,7 @@ module Client = {
 // Very rudimentary form data bindings
 module FormData = {
   type t
-  type file
+  type file = WebAPI.DOM.file
 
   type formValue =
     | String(string)
