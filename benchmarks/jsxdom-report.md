@@ -1,5 +1,9 @@
 # JsxDOM removal: PR #2 build timings
 
+Historical 15-module comparison. The current 27-module data-feature base and
+refreshed PR #2 before/after timings are in
+[data-feature-report.md](data-feature-report.md).
+
 This measures the additional cost of owning React's intrinsic props/ref types
 locally, after the 15-module WebAPI migration in PR #1. It does not measure the
 still-pending removal of `JsxDOMStyle` or `JsxEvent`.
