@@ -19,3 +19,6 @@ src/legacy/*.bs.js
 
 # ReScript
 lib/
+
+# Benchmark tooling
+/benchmarks/__pycache__/

@@ -1,0 +1,168 @@
+{
+  "scenario": "data-baseline13-a",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-17T07:21:08-0500",
+  "react_commit": "b35fa9d7de992e38333d58e8f164de223aa3a8e0",
+  "source_ref": "bb34644ca803e021e7218a8a63b572705df73701",
+  "fixture": "/tmp/delta-scratch-.delta-fs-A91lRp/data-fixtures/data-baseline13-a",
+  "probe": null,
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": null,
+  "features": null,
+  "sources": {
+    "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+    "src/ReactDOM.res": "54045acb1ed0f221baaa8c893833fd1fa46ae72ad493c572a654cda76e36f777",
+    "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+    "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+    "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+    "src/ReactEvent.res": "5c57c5266d0776fb1da9e25dcc7d801332de369da0be8961b05de4eeabb0cce5",
+    "src/ReactEvent.resi": "2688cc5a939b68f24738c8974af0a686409c591dfa3216ba85e5df55a9923ebd",
+    "src/ReactTestUtils.res": "82288325ef85633e5975392ba431da7c81b5d41a831c7073f4da16bb0dd39985",
+    "src/ReactTestUtils.resi": "e954c92409e21b88c02d30823d7e2339a6d0bf8c09134e69e915a7c89d0ecc89",
+    "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+    "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+    "src/RescriptReactRouter.res": "b6be3088ad6c27f862d32fd69e1c9333f362c1153ba9dbe0567b9591ccf09e4a",
+    "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+  },
+  "config": {
+    "name": "@rescript/react",
+    "jsx": {
+      "version": 4
+    },
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "esmodule",
+        "in-source": true
+      }
+    ],
+    "suffix": ".res.js"
+  },
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 86.427218,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 41.946557,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 63.617756,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 77.859803,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 41.771303,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 63.281287,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 80.485233,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 41.913877,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 64.826327,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 92.009521,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 42.077058,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 65.843245,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 96.347703,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 41.9825,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 66.005156,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 86.427218,
+      "min_ms": 77.859803,
+      "max_ms": 96.347703,
+      "mean_ms": 86.62589559999999
+    },
+    "cached": {
+      "median_ms": 41.946557,
+      "min_ms": 41.771303,
+      "max_ms": 42.077058,
+      "mean_ms": 41.938259
+    },
+    "edit": {
+      "median_ms": 64.826327,
+      "min_ms": 63.281287,
+      "max_ms": 66.005156,
+      "mean_ms": 64.7147542
+    }
+  },
+  "artifacts": {
+    "react": {
+      ".cmi": 18,
+      ".cmj": 18,
+      ".ast": 18
+    }
+  },
+  "webapi_compiled_modules": []
+}

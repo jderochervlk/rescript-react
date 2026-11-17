@@ -1,0 +1,2165 @@
+{
+  "method": "30 balanced randomized rounds; one warmup per fixture; clean, cached no-op, single-file edit",
+  "seed": 20260417,
+  "upstream_commit": "bb34644ca803e021e7218a8a63b572705df73701",
+  "candidate_commit": "5010c947b2b4729f42b082662b9ba29ed43a42e7",
+  "configurations": {
+    "upstream-v12": {
+      "react_commit": "bb34644ca803e021e7218a8a63b572705df73701",
+      "compiler": "12.3.1",
+      "input_sha256": "80a7f47edd3cd53df5c7052aafb0f365e7aadd37b47fbba89493b33f30377690",
+      "inputs": {
+        "package-lock.json": "e6515bac283d6e9638d6bbc092ebe6f57c6d4591521e61e54bdfc6c1a77b7c10",
+        "package.json": "5a9529c975af2af522e041593fc6415e29370222747680e7bc8b2efdf20b7daa",
+        "rescript.json": "09bae984079245945593e1542b440ee8ae0e8391754b03a5abff23d93ac99c8b",
+        "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+        "src/ReactDOM.res": "54045acb1ed0f221baaa8c893833fd1fa46ae72ad493c572a654cda76e36f777",
+        "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+        "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+        "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+        "src/ReactEvent.res": "5c57c5266d0776fb1da9e25dcc7d801332de369da0be8961b05de4eeabb0cce5",
+        "src/ReactEvent.resi": "2688cc5a939b68f24738c8974af0a686409c591dfa3216ba85e5df55a9923ebd",
+        "src/ReactTestUtils.res": "82288325ef85633e5975392ba431da7c81b5d41a831c7073f4da16bb0dd39985",
+        "src/ReactTestUtils.resi": "e954c92409e21b88c02d30823d7e2339a6d0bf8c09134e69e915a7c89d0ecc89",
+        "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+        "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+        "src/RescriptReactRouter.res": "b6be3088ad6c27f862d32fd69e1c9333f362c1153ba9dbe0567b9591ccf09e4a",
+        "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+      },
+      "config": {
+        "name": "@rescript/react",
+        "jsx": {
+          "version": 4
+        },
+        "sources": [
+          {
+            "dir": "src"
+          }
+        ],
+        "package-specs": [
+          {
+            "module": "esmodule",
+            "in-source": true
+          }
+        ],
+        "suffix": ".res.js",
+        "dependencies": []
+      },
+      "package_lock_sha256": "e6515bac283d6e9638d6bbc092ebe6f57c6d4591521e61e54bdfc6c1a77b7c10"
+    },
+    "upstream-v13": {
+      "react_commit": "bb34644ca803e021e7218a8a63b572705df73701",
+      "compiler": "13.0.0-alpha.7",
+      "input_sha256": "022b5f2b6dc938a7d58827491fc383d63719bb5640dcb61cedeae94dee87ce65",
+      "inputs": {
+        "package-lock.json": "e1720cfa17a511f124cdc01c46e029574d8798b303a04956195cbbb17b973000",
+        "package.json": "277221b41f921d8b762f354937bb569efa27ef9c3f0f18a240276f7e2ca0da4b",
+        "rescript.json": "09bae984079245945593e1542b440ee8ae0e8391754b03a5abff23d93ac99c8b",
+        "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+        "src/ReactDOM.res": "54045acb1ed0f221baaa8c893833fd1fa46ae72ad493c572a654cda76e36f777",
+        "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+        "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+        "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+        "src/ReactEvent.res": "5c57c5266d0776fb1da9e25dcc7d801332de369da0be8961b05de4eeabb0cce5",
+        "src/ReactEvent.resi": "2688cc5a939b68f24738c8974af0a686409c591dfa3216ba85e5df55a9923ebd",
+        "src/ReactTestUtils.res": "82288325ef85633e5975392ba431da7c81b5d41a831c7073f4da16bb0dd39985",
+        "src/ReactTestUtils.resi": "e954c92409e21b88c02d30823d7e2339a6d0bf8c09134e69e915a7c89d0ecc89",
+        "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+        "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+        "src/RescriptReactRouter.res": "b6be3088ad6c27f862d32fd69e1c9333f362c1153ba9dbe0567b9591ccf09e4a",
+        "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+      },
+      "config": {
+        "name": "@rescript/react",
+        "jsx": {
+          "version": 4
+        },
+        "sources": [
+          {
+            "dir": "src"
+          }
+        ],
+        "package-specs": [
+          {
+            "module": "esmodule",
+            "in-source": true
+          }
+        ],
+        "suffix": ".res.js",
+        "dependencies": []
+      },
+      "package_lock_sha256": "e1720cfa17a511f124cdc01c46e029574d8798b303a04956195cbbb17b973000"
+    },
+    "migrated-v13": {
+      "react_commit": "5010c947b2b4729f42b082662b9ba29ed43a42e7",
+      "compiler": "13.0.0-alpha.7",
+      "input_sha256": "d07c7a64cb9e4888a9c1aaeafa67a6561bca81e9c4b69dc7c41e0cea0c1030b4",
+      "inputs": {
+        "package-lock.json": "d38df840d6eddb879798c9b150c70c5466656c0a01b9c0fe357852d0db7414ec",
+        "package.json": "af027e9b75e07ed6466600b4d51377a5cf779a91602c2e4c61e85b15555b00ac",
+        "rescript.json": "5e1c9b33f06badd095cf14fa65d48428df75c4cde49846f58d9281c2000b19b6",
+        "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+        "src/ReactDOM.res": "1b628b083223ba939814534375a46320381c9d3845f3c2cd48ffba0745ead19e",
+        "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+        "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+        "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+        "src/ReactEvent.res": "8bd245d57d82375d5b5ad128c6b88d7b7209a469e5bd8fbdbe39cb1c468afb2e",
+        "src/ReactEvent.resi": "075e2f081c3cdf1defcff26ea4cb6a0aafbd3549bda9a97dd13284d8bb2af2dd",
+        "src/ReactTestUtils.res": "00781832afdb76339f8a9ad97068102bbc364d9d18dcd4945307c771e8f1b8d5",
+        "src/ReactTestUtils.resi": "a24e9869884a0aa4612fe02bd5809ffb20cb2864b4291e42ec2b875c82163357",
+        "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+        "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+        "src/RescriptReactRouter.res": "2df77b3609d86e636f0abf1a2e3cb3e50365b44ca7689254e2b51450df4227a1",
+        "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+      },
+      "config": {
+        "name": "@rescript/react",
+        "jsx": {
+          "version": 4
+        },
+        "dependencies": [
+          {
+            "name": "@rescript/webapi",
+            "features": [
+              "WebAPI.DOMTree",
+              "WebAPI.History",
+              "WebAPI.Location"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "dir": "src"
+          }
+        ],
+        "package-specs": [
+          {
+            "module": "esmodule",
+            "in-source": true
+          }
+        ],
+        "suffix": ".res.js"
+      },
+      "package_lock_sha256": "d38df840d6eddb879798c9b150c70c5466656c0a01b9c0fe357852d0db7414ec"
+    }
+  },
+  "samples": [
+    {
+      "round": 1,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 95.367896,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 41.499315,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 58.419677,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 155.323763,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 49.587964,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 71.978255,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 134.376855,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.302197,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 1,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 79.617268,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 117.005053,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 45.369583,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.560625,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 85.96402,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 44.340072,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 58.819724,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 119.518405,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 46.295077,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 2,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 67.036364,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 102.386929,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 45.299346,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.360347,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 140.43252,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.800301,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 66.096396,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 131.395485,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.996462,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 3,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 81.401767,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 75.503942,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.802062,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.396187,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 136.429412,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 51.206865,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 75.232882,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 130.165245,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 45.707149,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 4,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 80.391141,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 121.738672,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.847489,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 69.625134,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 95.594122,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 41.544597,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 67.164696,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 134.958614,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 44.896077,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 5,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.2927,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 121.212335,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 39.527845,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 73.173258,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 128.482664,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.338618,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 71.752402,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 85.770888,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.969083,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 6,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 65.17575,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 119.496887,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 49.995443,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 72.106724,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 147.86517,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 41.008881,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 79.83869,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 89.80123,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.48192,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 7,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.509097,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 108.169025,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 54.763394,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 134.895574,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 127.965222,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 40.165407,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 80.034433,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 138.349762,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.349169,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 8,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 139.715561,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 77.130321,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.196486,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 58.662475,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 132.847756,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 43.436357,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 81.309681,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 177.571711,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 55.912527,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 9,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 84.421584,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 118.635513,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.316769,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 81.294792,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 141.617865,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 48.070612,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 72.362583,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 97.459382,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 45.381414,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 10,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 67.182202,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 139.839165,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 47.697139,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 82.491383,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 123.957559,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.408346,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 75.327674,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 88.091939,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 45.452356,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 11,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.647292,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 147.081208,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 50.775656,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 80.946138,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 88.553766,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.517292,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 67.617334,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 143.364342,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 56.45938,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 12,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 70.51031,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 133.396363,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 40.133669,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 60.454062,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 122.630893,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 49.993554,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 79.18669,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 82.850572,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 45.223575,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 13,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 66.465943,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 90.890321,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 51.867284,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 66.376793,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 137.37693,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 41.433181,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 82.299721,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 116.508648,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 41.57689,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 14,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 71.919335,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 141.518131,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 53.86292,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 74.130607,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 121.672417,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 41.043358,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 63.11715,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 86.424718,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 40.136177,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 15,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 62.939882,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 97.118114,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 36.382569,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 63.584782,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 114.71435,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 47.775298,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 85.049298,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 138.61524,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.309786,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 16,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 67.927852,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 119.79117,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 49.141709,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 68.201782,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 85.543877,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 47.434721,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.293166,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 130.478014,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 45.373644,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 17,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 80.075598,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 126.647291,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 53.221687,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 67.504424,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 98.473953,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 47.073364,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 57.58697,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 129.849595,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 39.273834,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 18,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 77.111635,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 151.508215,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.662332,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 64.82451,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 74.390709,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 35.713503,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 58.840205,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 146.836652,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 44.657124,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 19,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.211011,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 88.998459,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 37.516386,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 59.966957,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 112.411017,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 46.060226,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 70.147388,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 130.848103,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 47.85192,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 20,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 76.715502,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 134.394996,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 39.671839,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.411031,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 97.768938,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.679334,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 59.138432,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 113.019215,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 44.574295,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 21,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 66.411981,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 122.761175,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 45.69413,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 64.373577,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 99.03199,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.688587,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 67.522884,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 142.488886,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 45.136051,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 22,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.560009,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 91.517891,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 44.107164,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 62.345103,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 119.580322,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 45.376467,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 67.572963,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 122.717563,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 41.265569,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 23,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.884389,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 125.041639,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 45.726435,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 75.363456,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 85.601649,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.125859,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 65.837669,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 117.695232,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.784946,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 24,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 67.297633,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 124.60289,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 44.880118,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 75.163823,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 111.440859,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 49.815837,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 70.111835,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 92.420252,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 44.941932,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 25,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 62.864296,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 130.333477,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.6101,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 75.029145,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 133.146278,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 43.921256,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 72.795779,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 84.861404,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 45.012314,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 26,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.605785,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 125.222293,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 39.80833,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 75.349759,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 86.08686,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.754092,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 65.375118,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 140.779169,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.609891,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 27,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 72.952232,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 144.073177,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 47.136975,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 84.259531,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 135.728691,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 51.383288,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 77.387953,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 96.031529,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.655722,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 28,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 66.972618,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 102.255586,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.277657,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 75.121982,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 138.935466,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.000949,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 78.596573,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 87.490623,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 42.220673,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 29,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 64.165806,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v13",
+      "mode": "clean",
+      "ms": 85.432082,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v13",
+      "mode": "cached",
+      "ms": 43.557568,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v13",
+      "mode": "edit",
+      "ms": 63.451231,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v13:\nThe package.json name is \"benchmark-upstream-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "migrated-v13",
+      "mode": "clean",
+      "ms": 140.215076,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "migrated-v13",
+      "mode": "cached",
+      "ms": 47.076248,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "migrated-v13",
+      "mode": "edit",
+      "ms": 75.21789,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/migrated-v13:\nThe package.json name is \"benchmark-migrated-v13\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v12",
+      "mode": "clean",
+      "ms": 149.495711,
+      "log": "Cleaned 0/0\nParsed 9 source files\nCompiled 9 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v12",
+      "mode": "cached",
+      "ms": 46.288122,
+      "log": "Cleaned 0/13\nParsed 0 source files\nCompiled 0 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    },
+    {
+      "round": 30,
+      "configuration": "upstream-v12",
+      "mode": "edit",
+      "ms": 81.107332,
+      "log": "Cleaned 0/13\nParsed 1 source files\nCompiled 2 modules\nWARN:\n\nPackage name mismatch for /tmp/delta-terminal-.delta-fs-Vnui38/rescript-react-benchmark-ebx9usu2/upstream-v12:\nThe package.json name is \"benchmark-upstream-v12\", while the rescript.json name is \"@rescript/react\"\nThis inconsistency will cause issues with package resolution.\n\n"
+    }
+  ],
+  "warmups_ms": {
+    "upstream-v12": 139.577921,
+    "upstream-v13": 93.275957,
+    "migrated-v13": 111.679856
+  },
+  "summary": {
+    "upstream-v12": {
+      "clean": {
+        "n": 30,
+        "median_ms": 131.12179400000002,
+        "mean_ms": 132.49687956666668,
+        "min_ms": 114.71435,
+        "max_ms": 149.495711,
+        "stdev_ms": 9.606678212340528,
+        "median_95ci_bootstrap_ms": [
+          128.9074085,
+          136.167772
+        ]
+      },
+      "cached": {
+        "n": 30,
+        "median_ms": 45.5403965,
+        "mean_ms": 45.03151616666667,
+        "min_ms": 39.273834,
+        "max_ms": 53.86292,
+        "stdev_ms": 3.548278858842373,
+        "median_95ci_bootstrap_ms": [
+          44.768621,
+          46.309483
+        ]
+      },
+      "edit": {
+        "n": 30,
+        "median_ms": 79.0355395,
+        "mean_ms": 79.0285662,
+        "min_ms": 73.173258,
+        "max_ms": 85.049298,
+        "stdev_ms": 2.8929220424521063,
+        "median_95ci_bootstrap_ms": [
+          78.3518655,
+          80.23336950000001
+        ]
+      }
+    },
+    "upstream-v13": {
+      "clean": {
+        "n": 30,
+        "median_ms": 88.7761125,
+        "mean_ms": 90.0242467,
+        "min_ms": 74.390709,
+        "max_ms": 108.169025,
+        "stdev_ms": 7.74901305948427,
+        "median_95ci_bootstrap_ms": [
+          86.02544,
+          93.894074
+        ]
+      },
+      "cached": {
+        "n": 30,
+        "median_ms": 43.618451,
+        "mean_ms": 43.6779387,
+        "min_ms": 35.713503,
+        "max_ms": 54.763394,
+        "stdev_ms": 3.7843962060012375,
+        "median_95ci_bootstrap_ms": [
+          42.704907,
+          44.641002
+        ]
+      },
+      "edit": {
+        "n": 30,
+        "median_ms": 64.378267,
+        "mean_ms": 65.9394665,
+        "min_ms": 57.58697,
+        "max_ms": 134.895574,
+        "stdev_ms": 13.374418883583482,
+        "median_95ci_bootstrap_ms": [
+          63.195556499999995,
+          65.27543399999999
+        ]
+      }
+    },
+    "migrated-v13": {
+      "clean": {
+        "n": 30,
+        "median_ms": 127.5649775,
+        "mean_ms": 130.1151842,
+        "min_ms": 102.255586,
+        "max_ms": 177.571711,
+        "stdev_ms": 15.50018022501399,
+        "median_95ci_bootstrap_ms": [
+          120.7317935,
+          137.389587
+        ]
+      },
+      "cached": {
+        "n": 30,
+        "median_ms": 47.5091185,
+        "mean_ms": 47.7311821,
+        "min_ms": 40.133669,
+        "max_ms": 56.45938,
+        "stdev_ms": 3.6874282415931643,
+        "median_95ci_bootstrap_ms": [
+          47.1769525,
+          47.959050500000004
+        ]
+      },
+      "edit": {
+        "n": 30,
+        "median_ms": 70.328849,
+        "mean_ms": 72.65020656666667,
+        "min_ms": 60.454062,
+        "max_ms": 139.715561,
+        "stdev_ms": 13.5440328499793,
+        "median_95ci_bootstrap_ms": [
+          67.7504075,
+          72.362583
+        ]
+      }
+    }
+  },
+  "environment": {
+    "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+    "cpu_count": 8,
+    "node": "v24.16.0",
+    "npm": "11.15.0"
+  }
+}

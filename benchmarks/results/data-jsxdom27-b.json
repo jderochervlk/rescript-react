@@ -1,0 +1,226 @@
+{
+  "scenario": "data-jsxdom27-b",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-17T07:21:22-0500",
+  "react_commit": "b35fa9d7de992e38333d58e8f164de223aa3a8e0",
+  "source_ref": "b35fa9d7de992e38333d58e8f164de223aa3a8e0",
+  "fixture": "/tmp/delta-scratch-.delta-fs-A91lRp/data-fixtures/data-jsxdom27-b",
+  "probe": null,
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/rescript-react/.delta/worktrees/jsswxvp74w80/rescript-react/node_modules/.data-feature-snapshots/after",
+  "features": [
+    "WebAPI.DOMTree",
+    "WebAPI.History",
+    "WebAPI.Location",
+    "WebAPI.Touch",
+    "WebAPI.DataTransfer",
+    "WebAPI.FormData"
+  ],
+  "sources": {
+    "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+    "src/ReactDOM.res": "6b17f5e5353684c9187986ec143f8d4bc538cea54340ed5e719e11a74b9874b6",
+    "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+    "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+    "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+    "src/ReactEvent.res": "17273ee27f2e65b427103f907d48a0cfc3d87a5b2eb6abf90e0b6c3692b8b45e",
+    "src/ReactEvent.resi": "bcf7c456f1a042fed358bca3340b34cbae05045805a9da69b7ce8b845df1eca6",
+    "src/ReactTestUtils.res": "86bd87d05c94db682eb762cc0270f35b2402016f23ef90370294f3e3d78bc341",
+    "src/ReactTestUtils.resi": "a24e9869884a0aa4612fe02bd5809ffb20cb2864b4291e42ec2b875c82163357",
+    "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+    "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+    "src/RescriptReactRouter.res": "2df77b3609d86e636f0abf1a2e3cb3e50365b44ca7689254e2b51450df4227a1",
+    "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+  },
+  "config": {
+    "name": "@rescript/react",
+    "jsx": {
+      "version": 4
+    },
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "esmodule",
+        "in-source": true
+      }
+    ],
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.DOMTree",
+          "WebAPI.History",
+          "WebAPI.Location",
+          "WebAPI.Touch",
+          "WebAPI.DataTransfer",
+          "WebAPI.FormData"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": null,
+  "webapi_status": null,
+  "webapi_source_ref": "691bc3f20dc5d621d22f5bf9931b4ec086542d5f",
+  "webapi_inputs_sha256": "7ef142f6a1d2b59d882e1bce4db5e8cbfb4c5fbd54251566b330b08138eeddf9",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 166.658003,
+      "log": "Cleaned 0/0\nParsed 36 source files\nCompiled 36 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 48.951678,
+      "log": "Cleaned 0/40\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 93.4796,
+      "log": "Cleaned 0/40\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 226.102215,
+      "log": "Cleaned 0/0\nParsed 36 source files\nCompiled 36 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 71.437044,
+      "log": "Cleaned 0/40\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 142.447834,
+      "log": "Cleaned 0/40\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 183.24909,
+      "log": "Cleaned 0/0\nParsed 36 source files\nCompiled 36 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 68.824048,
+      "log": "Cleaned 0/40\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 104.329433,
+      "log": "Cleaned 0/40\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 195.176608,
+      "log": "Cleaned 0/0\nParsed 36 source files\nCompiled 36 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 66.15818,
+      "log": "Cleaned 0/40\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 127.630996,
+      "log": "Cleaned 0/40\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 153.575803,
+      "log": "Cleaned 0/0\nParsed 36 source files\nCompiled 36 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 47.591015,
+      "log": "Cleaned 0/40\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 116.288756,
+      "log": "Cleaned 0/40\nParsed 1 source files\nCompiled 2 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 183.24909,
+      "min_ms": 153.575803,
+      "max_ms": 226.102215,
+      "mean_ms": 184.9523438
+    },
+    "cached": {
+      "median_ms": 66.15818,
+      "min_ms": 47.591015,
+      "max_ms": 71.437044,
+      "mean_ms": 60.592393
+    },
+    "edit": {
+      "median_ms": 116.288756,
+      "min_ms": 93.4796,
+      "max_ms": 142.447834,
+      "mean_ms": 116.8353238
+    }
+  },
+  "artifacts": {
+    "react": {
+      ".cmi": 18,
+      ".cmj": 18,
+      ".ast": 18
+    },
+    "webapi": {
+      ".cmi": 56,
+      ".cmj": 56,
+      ".ast": 54
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/cssom-core/CSSStyleDeclaration-WebAPI.cmj",
+    "src/cssom-core/CSSStyleValue-WebAPI.cmj",
+    "src/cssom-core/MediaList-WebAPI.cmj",
+    "src/cssom-core/StylePropertyMap-WebAPI.cmj",
+    "src/cssom-core/StylePropertyMapReadOnly-WebAPI.cmj",
+    "src/cssom-core/StyleSheet-WebAPI.cmj",
+    "src/cssom-core/StyleSheetList-WebAPI.cmj",
+    "src/data-transfer/DataTransfer-WebAPI.cmj",
+    "src/data-transfer/DataTransferItem-WebAPI.cmj",
+    "src/data-transfer/DataTransferItemList-WebAPI.cmj",
+    "src/dom-tree/DOMStringMap-WebAPI.cmj",
+    "src/dom-tree/DOMTree-WebAPI.cmj",
+    "src/file-entries/BaseFileAndDirectoryEntries-WebAPI.cmj",
+    "src/file-entries/FileAndDirectoryEntriesTypes-WebAPI.cmj",
+    "src/file-entries/FileSystemDirectoryEntry-WebAPI.cmj",
+    "src/file-entries/FileSystemDirectoryReader-WebAPI.cmj",
+    "src/file-entries/FileSystemEntry-WebAPI.cmj",
+    "src/form-data/FormData-WebAPI.cmj",
+    "src/form-data/FormDataEntryValue-WebAPI.cmj",
+    "src/history/History-WebAPI.cmj",
+    "src/history/HistoryTypes-WebAPI.cmj",
+    "src/location/Location-WebAPI.cmj",
+    "src/touch/Touch-WebAPI.cmj",
+    "src/touch/TouchList-WebAPI.cmj"
+  ]
+}

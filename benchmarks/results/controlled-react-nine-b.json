@@ -1,0 +1,201 @@
+{
+  "scenario": "controlled-react-nine-b",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-16T17:17:03-0500",
+  "react_commit": "6be1cf10cd6445c5a1047c8b76c53e80a258cf9f",
+  "source_ref": null,
+  "probe": null,
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/rescript-react/.delta/worktrees/jsswxvp74w80/rescript-react/node_modules/.selective-controlled/nine",
+  "features": [
+    "WebAPI.DOMTree",
+    "WebAPI.History",
+    "WebAPI.Location"
+  ],
+  "sources": {
+    "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+    "src/ReactDOM.res": "00f126ec50595c92bba4a4fe0b30b7ae25e98aa9ac528273658c12209f8b1e37",
+    "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+    "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+    "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+    "src/ReactEvent.res": "aaf5a83223d1074900b5c6db929bb4f327466edc788882c04db98c9a8f3429b2",
+    "src/ReactEvent.resi": "4850adff8b0645fc9c1e1004adaaa211337609d4990d3dc154465b89059a761a",
+    "src/ReactTestUtils.res": "86bd87d05c94db682eb762cc0270f35b2402016f23ef90370294f3e3d78bc341",
+    "src/ReactTestUtils.resi": "a24e9869884a0aa4612fe02bd5809ffb20cb2864b4291e42ec2b875c82163357",
+    "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+    "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+    "src/RescriptReactRouter.res": "2df77b3609d86e636f0abf1a2e3cb3e50365b44ca7689254e2b51450df4227a1",
+    "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+  },
+  "config": {
+    "name": "@rescript/react",
+    "jsx": {
+      "version": 4
+    },
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "esmodule",
+        "in-source": true
+      }
+    ],
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.DOMTree",
+          "WebAPI.History",
+          "WebAPI.Location"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": null,
+  "webapi_status": null,
+  "webapi_source_ref": "111c6d62b701c2b3082517575e76167341318867",
+  "webapi_inputs_sha256": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 101.313775,
+      "log": "Cleaned 0/0\nParsed 18 source files\nCompiled 18 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 39.077832,
+      "log": "Cleaned 0/22\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 61.267501,
+      "log": "Cleaned 0/22\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 113.380613,
+      "log": "Cleaned 0/0\nParsed 18 source files\nCompiled 18 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 46.757164,
+      "log": "Cleaned 0/22\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 65.921159,
+      "log": "Cleaned 0/22\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 106.244939,
+      "log": "Cleaned 0/0\nParsed 18 source files\nCompiled 18 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 44.949552,
+      "log": "Cleaned 0/22\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 66.79139,
+      "log": "Cleaned 0/22\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 112.197328,
+      "log": "Cleaned 0/0\nParsed 18 source files\nCompiled 18 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 45.875573,
+      "log": "Cleaned 0/22\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 71.301829,
+      "log": "Cleaned 0/22\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 118.865408,
+      "log": "Cleaned 0/0\nParsed 18 source files\nCompiled 18 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 44.906381,
+      "log": "Cleaned 0/22\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 80.469114,
+      "log": "Cleaned 0/22\nParsed 1 source files\nCompiled 2 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 112.197328,
+      "min_ms": 101.313775,
+      "max_ms": 118.865408,
+      "mean_ms": 110.4004126
+    },
+    "cached": {
+      "median_ms": 44.949552,
+      "min_ms": 39.077832,
+      "max_ms": 46.757164,
+      "mean_ms": 44.3133004
+    },
+    "edit": {
+      "median_ms": 66.79139,
+      "min_ms": 61.267501,
+      "max_ms": 80.469114,
+      "mean_ms": 69.15019860000001
+    }
+  },
+  "artifacts": {
+    "react": {
+      ".cmi": 18,
+      ".cmj": 18,
+      ".ast": 18
+    },
+    "webapi": {
+      ".cmi": 20,
+      ".cmj": 20,
+      ".ast": 18
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/cssom-types/CSSOMTypes-WebAPI.cmj",
+    "src/dom-tree/DOMStringMap-WebAPI.cmj",
+    "src/dom-tree/DOMTree-WebAPI.cmj",
+    "src/history/History-WebAPI.cmj",
+    "src/history/HistoryTypes-WebAPI.cmj",
+    "src/location/Location-WebAPI.cmj"
+  ]
+}

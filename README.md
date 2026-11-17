@@ -25,6 +25,17 @@ npm install
 npm start
 ```
 
+See [the WebAPI profiling report](benchmarks/README.md) for the built-in DOM
+migration, build measurements, and local-link reproduction commands.
+
+Event targets, native events, and FormData files now use WebAPI's core types.
+`currentTarget` and UI/pointer `view` return options to handle absent values.
+Clipboard data is an optional WebAPI DataTransfer, touch getters return
+WebAPI TouchList values, and ReactDOM.FormData.t shares WebAPI.FormData.t's
+identity. The narrow data features bring the WebAPI selection to 27 modules.
+See [type migration notes](benchmarks/webapi-type-strengthening.md) for the
+public type changes and remaining feature-isolation work.
+
 ### Acknowledgements
 
 This project is the next evolution of the original [reason-react](https://github.com/reasonml/reason-react) bindings.
