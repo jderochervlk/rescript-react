@@ -96,7 +96,7 @@ no public `t` alias; use the actual core types, not invented paths.
 `python3 benchmarks/check-consumer.py` checks the shared event contract across
 every event family, core and public File alias interoperability, rejected
 Element/currentTarget/view/private-file assumptions, and preservation of the
-15-module inventory. Its Node assertions exercise getter identity, nullable
+27-module inventory after data-feature integration. Its Node assertions exercise getter identity, nullable
 conversion, and native FormData/File values; they do not simulate real React
 browser dispatch.
 

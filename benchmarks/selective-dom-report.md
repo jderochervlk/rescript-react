@@ -1,5 +1,9 @@
 # Selective DOM reduction
 
+Historical 15-module layout investigation. The current data-feature integration
+and refreshed unchanged/PR #1/PR #2 timings are in
+[data-feature-report.md](data-feature-report.md).
+
 ## Unchanged React baselines: ReScript 12 and 13, without WebAPI
 
 Both baselines build the original nine React source modules and `rescript.json`

@@ -1,7 +1,20 @@
 # WebAPI feature-isolation experiment
 
+## Current selection: 27 WebAPI modules
+
+PR #1 now consumes the narrow Touch, DataTransfer, and FormData features in
+[WebAPI PR #416](https://github.com/rescript-lang/experimental-rescript-webapi/pull/416),
+in addition to DOMTree, History, and Location. The total is **27 WebAPI + 9 React
+= 36 source modules**, including the transitive legacy FileEntries feature.
+
+[data-feature-report.md](data-feature-report.md) is the current report: fresh
+unchanged v12/v13 controls, the prior 15-module control, narrow 27 versus broad
+102 with identical migrated sources, and PR #2's JsxDOM-removal timings.
+All six cases have ten clean/cached/edit samples and timestamped raw evidence.
+The older investigations below remain historical, not current-head timings.
+
 The later [core-backed type strengthening](webapi-type-strengthening.md) keeps
-the 15-module selection but changes public event/file types. Timings below
+the original 15-module selection in its first pass. Timings below
 remain tied to their recorded revisions, before that additional change.
 
 ## Unchanged React baselines: no WebAPI
@@ -28,9 +41,9 @@ the unchanged v13 baseline (89.56 ms); the separate sessions and sample counts
 do not establish a precise migration overhead. The 59-module comparison is
 already migrated to WebAPI, **not** the unchanged React baseline.
 
-## Current selection: 15 WebAPI modules
+## Earlier selection: 15 WebAPI modules
 
-PR #1 now uses **DOMTree + History + Location**, compiling **15 WebAPI source
+PR #1 previously used **DOMTree + History + Location**, compiling **15 WebAPI source
 modules + 9 React modules = 24**. Its dependency is pinned to WebAPI commit
 `81ac4eebeae3ff0cc9118e7b4b62323e3cee9729` in
 [WebAPI PR #415](https://github.com/rescript-lang/experimental-rescript-webapi/pull/415).
