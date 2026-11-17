@@ -1,5 +1,34 @@
 # Selective DOM reduction
 
+## Unchanged React baselines: ReScript 12 and 13, without WebAPI
+
+Both baselines build the original nine React source modules and `rescript.json`
+at `bb34644ca803e021e7218a8a63b572705df73701`, before any WebAPI migration.
+The recorded source hashes and configuration are identical. Neither has a
+WebAPI dependency: both raw results record `webapi: null` and `features: null`.
+Only the fixture toolchain changes to use the respective compiler/runtime.
+
+Wall-clock milliseconds, **five samples per mode**; median (minimum–maximum):
+
+| Compiler | WebAPI source modules | Clean | Cached no-op | Single-file rebuild |
+| --- | ---: | ---: | ---: | ---: |
+| ReScript 12.3.1 | 0 | 178.17 (142.23–223.88) | 79.38 (60.07–99.51) | 103.54 (84.14–330.95) |
+| ReScript 13.0.0-alpha.7 | 0 | 89.56 (86.86–109.04) | 48.07 (36.65–50.16) | 65.69 (57.01–79.21) |
+
+Raw samples, configuration and source hashes:
+[baseline-12.json](results/baseline-12.json) and
+[baseline-13.json](results/baseline-13.json).
+Build timing includes compiler startup, but excludes installation and cleanup.
+Clean removes compiler artifacts, not OS caches; cached builds change no source,
+and single-file rebuilds use the harness's small ReactDOMStyle edit.
+
+These were captured **before** the later ten-sample WebAPI-layout comparison.
+The selected 15-module layout's clean median (122.27 ms) exceeds the unchanged
+v13 baseline (89.56 ms) in the recorded results. Different sessions and sample
+counts mean this is not a precise causal estimate of migration overhead.
+In particular, improvements against the 59-module WebAPI layout below are
+**not improvements against unchanged React on ReScript 13**.
+
 ## Selected layout
 
 PR #1 uses the **15-module selective feature layout**, replacing the earlier
@@ -63,11 +92,11 @@ with their types is intentional, avoiding the extra type layer of the nine-modul
 alternative. Element, Node, HTMLCollection, Event, Animation, geometry, Window,
 Document, and MediaQueryList operation modules remain excluded until selected.
 
-## Four implementations compared
+## Four already-migrated WebAPI implementations compared
 
 | Label | Layout |
 | --- | --- |
-| `original` | Original 59-module selection; WebAPI `625b8687`, React `e549ebf` |
+| `original` | Already-migrated 59-module DOMNodes selection; WebAPI `625b8687`, React `e549ebf` |
 | `six` | Earlier six-module consolidation; WebAPI `acf8d6ce`, React `6be1cf1` |
 | `nine` | Basic DOM restored, rich DOMTree separately selected, CSS records extracted into CSSOMTypes |
 | `fifteen` | Basic DOM restored, rich DOMTree selected with seven intact CSS declaration modules |
@@ -76,13 +105,14 @@ The nine-module implementation is retained in WebAPI history at commit `4e2d1224
 The final fifteen-module implementation avoids the additional CSS extraction/
 aliasing layer, keeping the original CSS definitions and public module set.
 
-## React timings
+## Migrated React timings: later controlled comparison
 
+All rows use ReScript 13.0.0-alpha.7 and depend on WebAPI.
 Wall-clock milliseconds, median of **10 samples per mode**:
 
 | Layout | WebAPI source modules | Clean | Cached no-op | Single-file rebuild |
 | --- | ---: | ---: | ---: | ---: |
-| Original | 59 | 196.98 | 50.21 | 79.67 |
+| Already-migrated DOMNodes baseline | 59 | 196.98 | 50.21 | 79.67 |
 | Earlier consolidation | 6 | 121.48 | 45.92 | 64.19 |
 | Extracted type features | 9 | 124.96 | 46.02 | 69.90 |
 | **Selective intact modules** | **15** | **122.27** | **45.54** | **70.03** |
@@ -90,8 +120,9 @@ Wall-clock milliseconds, median of **10 samples per mode**:
 The three reduced layouts are effectively tied on clean-build speed at this
 sample size. **Six is not meaningfully faster than fifteen here.**
 
-The 15-module clean median is 37.9% below the original in this run, but that ratio
-must not be treated as a precise general performance claim. The original's two
+The 15-module clean median is 37.9% below the already-migrated 59-module baseline
+in this run, not below unchanged React. That ratio must not be treated as a
+precise general performance claim. The 59-module layout's two
 block medians differed substantially: 203.94 ms and 157.65 ms. The fifteen-module
 block medians were 119.58 ms and 124.95 ms. This was ordinary laptop execution,
 not a controlled CPU-frequency or load-isolated laboratory.
@@ -100,7 +131,7 @@ Clean sample ranges:
 
 | Layout | Minimum–maximum |
 | --- | ---: |
-| Original | 152.41–231.92 ms |
+| Already-migrated DOMNodes baseline | 152.41–231.92 ms |
 | Six | 96.65–154.82 ms |
 | Nine | 117.58–149.51 ms |
 | Fifteen | 100.66–164.98 ms |

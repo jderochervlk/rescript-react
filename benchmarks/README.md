@@ -1,5 +1,29 @@
 # WebAPI feature-isolation experiment
 
+## Unchanged React baselines: no WebAPI
+
+Before any WebAPI migration, the same nine React source modules and unchanged
+`rescript.json` from `bb34644ca803e021e7218a8a63b572705df73701` were built with
+each compiler. Neither configuration has a WebAPI dependency or feature selection.
+The fixture compiler/runtime versions were varied; the React sources were not.
+
+Median wall-clock milliseconds, **five samples per mode**:
+
+| Compiler | WebAPI source modules | Clean | Cached no-op | Single-file rebuild |
+| --- | ---: | ---: | ---: | ---: |
+| ReScript 12.3.1 | 0 | 178.17 | 79.38 | 103.54 |
+| ReScript 13.0.0-alpha.7 | 0 | 89.56 | 48.07 | 65.69 |
+
+Raw data: [baseline-12.json](results/baseline-12.json) and
+[baseline-13.json](results/baseline-13.json). Both record identical source hashes
+and configuration, with `webapi: null` and `features: null`.
+
+These baselines precede the later ten-sample migrated-layout comparison below.
+The selected WebAPI layout's recorded clean median (122.27 ms) is higher than
+the unchanged v13 baseline (89.56 ms); the separate sessions and sample counts
+do not establish a precise migration overhead. The 59-module comparison is
+already migrated to WebAPI, **not** the unchanged React baseline.
+
 ## Current selection: 15 WebAPI modules
 
 PR #1 now uses **DOMTree + History + Location**, compiling **15 WebAPI source
@@ -11,7 +35,7 @@ original library; the feature boundaries select only the needed groups.
 
 See [selective-dom-report.md](selective-dom-report.md) for the primary comparison,
 raw data, tradeoffs, and reproduction instructions. Median clean builds in the
-final ten-sample comparison were 196.98 ms for the original 59-module selection,
+final ten-sample comparison were 196.98 ms for the migrated 59-module selection,
 121.48 ms for the six-module consolidation, and 122.27 ms for the selected
 15-module layout. The reduced layouts are effectively tied at this sample size.
 
