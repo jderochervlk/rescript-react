@@ -43,7 +43,9 @@ stacked on the History/Location work in #413. React pins WebAPI commit
 
 The measurements used local source-folder links, not the archive install. The
 portable dependency pin makes the PRs reproducible without a machine-local path.
-No new timings are claimed for the separate JsxDOM-removal code in PR #2.
+These layout measurements do not include the JsxDOM-removal code in PR #2.
+The separate [JsxDOM before/after report](jsxdom-report.md) now measures that
+follow-up against a fresh PR #1 control, with timestamps and exact revisions.
 
 ## What changed this time
 

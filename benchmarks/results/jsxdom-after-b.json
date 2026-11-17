@@ -1,0 +1,207 @@
+{
+  "scenario": "jsxdom-after-b",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-17T06:45:55-0500",
+  "react_commit": "5410e8095a2c57498b226b50da662bffcd579bf5",
+  "source_ref": "5410e8095a2c57498b226b50da662bffcd579bf5",
+  "probe": null,
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/rescript-react/.delta/worktrees/jsswxvp74w80/rescript-react/node_modules/.jsxdom-profile-webapi",
+  "features": [
+    "WebAPI.DOMTree",
+    "WebAPI.History",
+    "WebAPI.Location"
+  ],
+  "sources": {
+    "src/React.res": "65b34f706818a620d97c2a42e42dc1e0883aa5149480858677c12269466ddad5",
+    "src/ReactDOM.res": "7b0304b03f8aebcd83e89a121f618b8818b362d7d7db0ea1f010925a0ebe1ae3",
+    "src/ReactDOMServer.res": "2be8757a8fd3e60280313faa4c75d1c6f77b4b99dc4042cb0a043c0999ab0d10",
+    "src/ReactDOMStatic.res": "1296d7932d043a040b6c59ee5cd014374a4a063a13ee75c9c95fd0324e7e31f9",
+    "src/ReactDOMStyle.res": "a2836a0764364b9bcbd0fc090432c711aecad7b91ffc83dfd9c4e26fb2e7ed2e",
+    "src/ReactEvent.res": "13538573814569ce56e41a6d5f36e8f67ca0cbcccdf7d9adbac0df39af536d7c",
+    "src/ReactEvent.resi": "ae6f83946cc6b251a26a09de167b6a252feb2ca183e420a18e15e0531135744e",
+    "src/ReactTestUtils.res": "86bd87d05c94db682eb762cc0270f35b2402016f23ef90370294f3e3d78bc341",
+    "src/ReactTestUtils.resi": "a24e9869884a0aa4612fe02bd5809ffb20cb2864b4291e42ec2b875c82163357",
+    "src/RescriptReactErrorBoundary.res": "7fab116e5e519687faa1ef91066accf7cea3698bc774538c6bff65d3f9a328c3",
+    "src/RescriptReactErrorBoundary.resi": "5dd0c5018531f28a31802172a8b70e07aa3e747e02629a546d49fe902da523e2",
+    "src/RescriptReactRouter.res": "2df77b3609d86e636f0abf1a2e3cb3e50365b44ca7689254e2b51450df4227a1",
+    "src/RescriptReactRouter.resi": "b2a7daa2be5b4e3ca1ac9ac4f838bf1350edf552eac5170e3381a7b05b0dc399"
+  },
+  "config": {
+    "name": "@rescript/react",
+    "jsx": {
+      "version": 4
+    },
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "esmodule",
+        "in-source": true
+      }
+    ],
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.DOMTree",
+          "WebAPI.History",
+          "WebAPI.Location"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": null,
+  "webapi_status": null,
+  "webapi_source_ref": "81ac4eebeae3ff0cc9118e7b4b62323e3cee9729",
+  "webapi_inputs_sha256": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 208.396208,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 61.922129,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 122.402663,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 199.604082,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 61.596037,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 117.602236,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 234.44435,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 64.244571,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 124.49053,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 212.19023,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 60.45262,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 107.306486,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 221.993903,
+      "log": "Cleaned 0/0\nParsed 24 source files\nCompiled 24 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 57.434223,
+      "log": "Cleaned 0/28\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 124.269905,
+      "log": "Cleaned 0/28\nParsed 1 source files\nCompiled 2 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 212.19023,
+      "min_ms": 199.604082,
+      "max_ms": 234.44435,
+      "mean_ms": 215.3257546
+    },
+    "cached": {
+      "median_ms": 61.596037,
+      "min_ms": 57.434223,
+      "max_ms": 64.244571,
+      "mean_ms": 61.129916
+    },
+    "edit": {
+      "median_ms": 122.402663,
+      "min_ms": 107.306486,
+      "max_ms": 124.49053,
+      "mean_ms": 119.214364
+    }
+  },
+  "artifacts": {
+    "react": {
+      ".cmi": 18,
+      ".cmj": 18,
+      ".ast": 18
+    },
+    "webapi": {
+      ".cmi": 32,
+      ".cmj": 32,
+      ".ast": 30
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/cssom-core/CSSStyleDeclaration-WebAPI.cmj",
+    "src/cssom-core/CSSStyleValue-WebAPI.cmj",
+    "src/cssom-core/MediaList-WebAPI.cmj",
+    "src/cssom-core/StylePropertyMap-WebAPI.cmj",
+    "src/cssom-core/StylePropertyMapReadOnly-WebAPI.cmj",
+    "src/cssom-core/StyleSheet-WebAPI.cmj",
+    "src/cssom-core/StyleSheetList-WebAPI.cmj",
+    "src/dom-tree/DOMStringMap-WebAPI.cmj",
+    "src/dom-tree/DOMTree-WebAPI.cmj",
+    "src/history/History-WebAPI.cmj",
+    "src/history/HistoryTypes-WebAPI.cmj",
+    "src/location/Location-WebAPI.cmj"
+  ]
+}
