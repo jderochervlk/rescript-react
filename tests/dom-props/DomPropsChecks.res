@@ -54,7 +54,7 @@ let focused = <input onFocus={event => ReactEvent.Focus.preventDefault(event)} /
 let toggled = <div onToggle={event => ReactEvent.Toggle.preventDefault(event)} />
 let beforeToggle = <div onBeforeToggleCapture={event => ReactEvent.Toggle.preventDefault(event)} />
 
-let toggleSource = (event: ReactEvent.Toggle.t): option<WebAPI.DOM.element> =>
+let toggleSource = (event: ReactEvent.Toggle.t): option<WebAPI.DOMTree.element> =>
   ReactEvent.Toggle.source(event)
 
 let toggleState = (event: ReactEvent.Toggle.t) => (
