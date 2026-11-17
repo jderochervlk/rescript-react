@@ -1,0 +1,922 @@
+{
+  "protocol": {
+    "blocks": [
+      [
+        "original",
+        "six",
+        "nine",
+        "fifteen"
+      ],
+      [
+        "fifteen",
+        "nine",
+        "six",
+        "original"
+      ]
+    ],
+    "runs_per_mode_per_block": 5,
+    "dependency_layout": "parallel source snapshots without installed dev dependencies"
+  },
+  "react": {
+    "original": {
+      "webapi_modules": 59,
+      "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+      "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+      "timings": {
+        "clean": {
+          "median_ms": 196.9792755,
+          "min_ms": 152.407898,
+          "max_ms": 231.915346,
+          "samples": 10,
+          "block_medians_ms": [
+            203.937327,
+            157.647338
+          ]
+        },
+        "cached": {
+          "median_ms": 50.209715,
+          "min_ms": 46.966465,
+          "max_ms": 58.644959,
+          "samples": 10,
+          "block_medians_ms": [
+            50.721045,
+            49.175817
+          ]
+        },
+        "edit": {
+          "median_ms": 79.666143,
+          "min_ms": 67.781167,
+          "max_ms": 95.580262,
+          "samples": 10,
+          "block_medians_ms": [
+            85.887669,
+            70.877925
+          ]
+        }
+      }
+    },
+    "six": {
+      "webapi_modules": 6,
+      "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+      "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+      "timings": {
+        "clean": {
+          "median_ms": 121.4837135,
+          "min_ms": 96.6506,
+          "max_ms": 154.820804,
+          "samples": 10,
+          "block_medians_ms": [
+            116.986936,
+            136.444412
+          ]
+        },
+        "cached": {
+          "median_ms": 45.918499499999996,
+          "min_ms": 34.138361,
+          "max_ms": 67.26357,
+          "samples": 10,
+          "block_medians_ms": [
+            49.254537,
+            44.69969
+          ]
+        },
+        "edit": {
+          "median_ms": 64.191591,
+          "min_ms": 59.011536,
+          "max_ms": 91.962924,
+          "samples": 10,
+          "block_medians_ms": [
+            62.010103,
+            65.409542
+          ]
+        }
+      }
+    },
+    "nine": {
+      "webapi_modules": 9,
+      "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+      "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+      "timings": {
+        "clean": {
+          "median_ms": 124.9571005,
+          "min_ms": 117.575685,
+          "max_ms": 149.514431,
+          "samples": 10,
+          "block_medians_ms": [
+            130.383704,
+            124.384247
+          ]
+        },
+        "cached": {
+          "median_ms": 46.017362500000004,
+          "min_ms": 43.013631,
+          "max_ms": 52.258116,
+          "samples": 10,
+          "block_medians_ms": [
+            45.631518,
+            46.403207
+          ]
+        },
+        "edit": {
+          "median_ms": 69.895557,
+          "min_ms": 65.577381,
+          "max_ms": 95.81509,
+          "samples": 10,
+          "block_medians_ms": [
+            72.111824,
+            69.192937
+          ]
+        }
+      }
+    },
+    "fifteen": {
+      "webapi_modules": 15,
+      "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+      "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+      "timings": {
+        "clean": {
+          "median_ms": 122.26531800000001,
+          "min_ms": 100.664153,
+          "max_ms": 164.981698,
+          "samples": 10,
+          "block_medians_ms": [
+            119.578235,
+            124.952401
+          ]
+        },
+        "cached": {
+          "median_ms": 45.536150500000005,
+          "min_ms": 37.910211,
+          "max_ms": 55.430744,
+          "samples": 10,
+          "block_medians_ms": [
+            48.696468,
+            45.483331
+          ]
+        },
+        "edit": {
+          "median_ms": 70.033585,
+          "min_ms": 60.697075,
+          "max_ms": 79.73907,
+          "samples": 10,
+          "block_medians_ms": [
+            70.715936,
+            69.351234
+          ]
+        }
+      }
+    }
+  },
+  "probes": {
+    "dom": {
+      "original": {
+        "webapi_modules": 3,
+        "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+        "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+        "timings": {
+          "clean": {
+            "median_ms": 86.49445800000001,
+            "min_ms": 62.12796,
+            "max_ms": 112.173097,
+            "samples": 10,
+            "block_medians_ms": [
+              87.7223,
+              85.266616
+            ]
+          },
+          "cached": {
+            "median_ms": 47.947697500000004,
+            "min_ms": 39.943421,
+            "max_ms": 63.764645,
+            "samples": 10,
+            "block_medians_ms": [
+              48.175526,
+              46.507506
+            ]
+          },
+          "edit": {
+            "median_ms": 56.844193000000004,
+            "min_ms": 52.252495,
+            "max_ms": 65.078194,
+            "samples": 10,
+            "block_medians_ms": [
+              54.80763,
+              58.268558
+            ]
+          }
+        }
+      },
+      "six": {
+        "webapi_modules": 3,
+        "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+        "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+        "timings": {
+          "clean": {
+            "median_ms": 95.345564,
+            "min_ms": 79.049036,
+            "max_ms": 132.016047,
+            "samples": 10,
+            "block_medians_ms": [
+              101.918351,
+              91.775597
+            ]
+          },
+          "cached": {
+            "median_ms": 36.770390500000005,
+            "min_ms": 33.287943,
+            "max_ms": 68.846539,
+            "samples": 10,
+            "block_medians_ms": [
+              40.287354,
+              35.792
+            ]
+          },
+          "edit": {
+            "median_ms": 50.809309,
+            "min_ms": 43.799464,
+            "max_ms": 57.700877,
+            "samples": 10,
+            "block_medians_ms": [
+              53.614481,
+              50.648668
+            ]
+          }
+        }
+      },
+      "nine": {
+        "webapi_modules": 3,
+        "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+        "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+        "timings": {
+          "clean": {
+            "median_ms": 78.11136250000001,
+            "min_ms": 69.87822,
+            "max_ms": 96.578576,
+            "samples": 10,
+            "block_medians_ms": [
+              77.541576,
+              88.261324
+            ]
+          },
+          "cached": {
+            "median_ms": 45.794765,
+            "min_ms": 40.450814,
+            "max_ms": 63.148102,
+            "samples": 10,
+            "block_medians_ms": [
+              44.265486,
+              46.836959
+            ]
+          },
+          "edit": {
+            "median_ms": 55.368800500000006,
+            "min_ms": 47.430907,
+            "max_ms": 68.839985,
+            "samples": 10,
+            "block_medians_ms": [
+              54.93379,
+              60.084633
+            ]
+          }
+        }
+      },
+      "fifteen": {
+        "webapi_modules": 3,
+        "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+        "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+        "timings": {
+          "clean": {
+            "median_ms": 81.6517285,
+            "min_ms": 62.118471,
+            "max_ms": 83.577825,
+            "samples": 10,
+            "block_medians_ms": [
+              83.316682,
+              64.798748
+            ]
+          },
+          "cached": {
+            "median_ms": 45.000603,
+            "min_ms": 34.15942,
+            "max_ms": 59.694288,
+            "samples": 10,
+            "block_medians_ms": [
+              50.97735,
+              37.323752
+            ]
+          },
+          "edit": {
+            "median_ms": 58.1740315,
+            "min_ms": 44.129647,
+            "max_ms": 64.860593,
+            "samples": 10,
+            "block_medians_ms": [
+              62.66526,
+              45.655229
+            ]
+          }
+        }
+      }
+    },
+    "location": {
+      "original": {
+        "webapi_modules": 4,
+        "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+        "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+        "timings": {
+          "clean": {
+            "median_ms": 83.4414115,
+            "min_ms": 70.820794,
+            "max_ms": 98.463024,
+            "samples": 10,
+            "block_medians_ms": [
+              82.402709,
+              84.480114
+            ]
+          },
+          "cached": {
+            "median_ms": 46.9419515,
+            "min_ms": 43.246273,
+            "max_ms": 59.470348,
+            "samples": 10,
+            "block_medians_ms": [
+              47.040994,
+              46.842909
+            ]
+          },
+          "edit": {
+            "median_ms": 55.3446965,
+            "min_ms": 49.007976,
+            "max_ms": 73.136069,
+            "samples": 10,
+            "block_medians_ms": [
+              55.270268,
+              55.419125
+            ]
+          }
+        }
+      },
+      "six": {
+        "webapi_modules": 4,
+        "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+        "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+        "timings": {
+          "clean": {
+            "median_ms": 100.542357,
+            "min_ms": 81.219056,
+            "max_ms": 120.118264,
+            "samples": 10,
+            "block_medians_ms": [
+              98.946845,
+              102.137869
+            ]
+          },
+          "cached": {
+            "median_ms": 44.5977405,
+            "min_ms": 34.907296,
+            "max_ms": 49.234999,
+            "samples": 10,
+            "block_medians_ms": [
+              42.957244,
+              45.221876
+            ]
+          },
+          "edit": {
+            "median_ms": 54.6349775,
+            "min_ms": 44.562241,
+            "max_ms": 67.716804,
+            "samples": 10,
+            "block_medians_ms": [
+              53.298398,
+              54.999643
+            ]
+          }
+        }
+      },
+      "nine": {
+        "webapi_modules": 4,
+        "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+        "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+        "timings": {
+          "clean": {
+            "median_ms": 82.906633,
+            "min_ms": 63.898805,
+            "max_ms": 114.939199,
+            "samples": 10,
+            "block_medians_ms": [
+              93.311532,
+              70.848427
+            ]
+          },
+          "cached": {
+            "median_ms": 42.3680595,
+            "min_ms": 35.023467,
+            "max_ms": 68.121655,
+            "samples": 10,
+            "block_medians_ms": [
+              45.571083,
+              35.530398
+            ]
+          },
+          "edit": {
+            "median_ms": 49.7168485,
+            "min_ms": 44.37395,
+            "max_ms": 56.845801,
+            "samples": 10,
+            "block_medians_ms": [
+              54.302813,
+              46.58922
+            ]
+          }
+        }
+      },
+      "fifteen": {
+        "webapi_modules": 4,
+        "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+        "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+        "timings": {
+          "clean": {
+            "median_ms": 81.3152235,
+            "min_ms": 72.310527,
+            "max_ms": 90.691951,
+            "samples": 10,
+            "block_medians_ms": [
+              80.682362,
+              81.948085
+            ]
+          },
+          "cached": {
+            "median_ms": 45.7787105,
+            "min_ms": 43.458163,
+            "max_ms": 61.754595,
+            "samples": 10,
+            "block_medians_ms": [
+              46.116694,
+              45.440727
+            ]
+          },
+          "edit": {
+            "median_ms": 57.1429545,
+            "min_ms": 54.225448,
+            "max_ms": 67.70749,
+            "samples": 10,
+            "block_medians_ms": [
+              56.122601,
+              57.975687
+            ]
+          }
+        }
+      }
+    },
+    "url": {
+      "original": {
+        "webapi_modules": 6,
+        "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+        "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+        "timings": {
+          "clean": {
+            "median_ms": 76.1409515,
+            "min_ms": 64.918739,
+            "max_ms": 106.744879,
+            "samples": 10,
+            "block_medians_ms": [
+              71.455458,
+              80.966202
+            ]
+          },
+          "cached": {
+            "median_ms": 44.594811,
+            "min_ms": 35.928754,
+            "max_ms": 50.748456,
+            "samples": 10,
+            "block_medians_ms": [
+              39.096641,
+              45.261301
+            ]
+          },
+          "edit": {
+            "median_ms": 54.369386,
+            "min_ms": 45.158663,
+            "max_ms": 70.209119,
+            "samples": 10,
+            "block_medians_ms": [
+              47.159377,
+              55.221612
+            ]
+          }
+        }
+      },
+      "six": {
+        "webapi_modules": 6,
+        "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+        "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+        "timings": {
+          "clean": {
+            "median_ms": 101.1392645,
+            "min_ms": 94.100574,
+            "max_ms": 117.772419,
+            "samples": 10,
+            "block_medians_ms": [
+              97.010352,
+              108.467773
+            ]
+          },
+          "cached": {
+            "median_ms": 44.2568395,
+            "min_ms": 40.405525,
+            "max_ms": 47.768733,
+            "samples": 10,
+            "block_medians_ms": [
+              44.557299,
+              42.264619
+            ]
+          },
+          "edit": {
+            "median_ms": 56.986292500000005,
+            "min_ms": 53.610865,
+            "max_ms": 73.597752,
+            "samples": 10,
+            "block_medians_ms": [
+              56.822189,
+              57.85369
+            ]
+          }
+        }
+      },
+      "nine": {
+        "webapi_modules": 6,
+        "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+        "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+        "timings": {
+          "clean": {
+            "median_ms": 80.5192965,
+            "min_ms": 72.529612,
+            "max_ms": 94.815568,
+            "samples": 10,
+            "block_medians_ms": [
+              79.477983,
+              80.618727
+            ]
+          },
+          "cached": {
+            "median_ms": 45.2439155,
+            "min_ms": 41.544342,
+            "max_ms": 51.083591,
+            "samples": 10,
+            "block_medians_ms": [
+              46.733799,
+              45.215661
+            ]
+          },
+          "edit": {
+            "median_ms": 56.1963355,
+            "min_ms": 54.50853,
+            "max_ms": 65.279681,
+            "samples": 10,
+            "block_medians_ms": [
+              56.923147,
+              55.730179
+            ]
+          }
+        }
+      },
+      "fifteen": {
+        "webapi_modules": 6,
+        "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+        "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+        "timings": {
+          "clean": {
+            "median_ms": 83.092413,
+            "min_ms": 72.087435,
+            "max_ms": 103.011413,
+            "samples": 10,
+            "block_medians_ms": [
+              81.989315,
+              84.195511
+            ]
+          },
+          "cached": {
+            "median_ms": 45.1460745,
+            "min_ms": 42.841879,
+            "max_ms": 55.763881,
+            "samples": 10,
+            "block_medians_ms": [
+              44.317234,
+              47.459126
+            ]
+          },
+          "edit": {
+            "median_ms": 58.677572999999995,
+            "min_ms": 54.085084,
+            "max_ms": 67.272192,
+            "samples": 10,
+            "block_medians_ms": [
+              58.744073,
+              57.35804
+            ]
+          }
+        }
+      }
+    },
+    "fetch": {
+      "original": {
+        "webapi_modules": 36,
+        "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+        "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+        "timings": {
+          "clean": {
+            "median_ms": 118.91184899999999,
+            "min_ms": 108.135102,
+            "max_ms": 135.759819,
+            "samples": 10,
+            "block_medians_ms": [
+              127.833287,
+              113.42213
+            ]
+          },
+          "cached": {
+            "median_ms": 46.916681,
+            "min_ms": 45.090656,
+            "max_ms": 66.954519,
+            "samples": 10,
+            "block_medians_ms": [
+              46.84887,
+              46.984492
+            ]
+          },
+          "edit": {
+            "median_ms": 58.429435,
+            "min_ms": 48.24333,
+            "max_ms": 68.84649,
+            "samples": 10,
+            "block_medians_ms": [
+              61.490795,
+              55.356093
+            ]
+          }
+        }
+      },
+      "six": {
+        "webapi_modules": 36,
+        "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+        "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+        "timings": {
+          "clean": {
+            "median_ms": 132.37266749999998,
+            "min_ms": 115.666041,
+            "max_ms": 154.203612,
+            "samples": 10,
+            "block_medians_ms": [
+              123.244834,
+              149.526557
+            ]
+          },
+          "cached": {
+            "median_ms": 46.224987999999996,
+            "min_ms": 39.688312,
+            "max_ms": 58.843589,
+            "samples": 10,
+            "block_medians_ms": [
+              48.064084,
+              45.741198
+            ]
+          },
+          "edit": {
+            "median_ms": 60.384649499999995,
+            "min_ms": 47.663495,
+            "max_ms": 69.164853,
+            "samples": 10,
+            "block_medians_ms": [
+              52.317809,
+              61.440086
+            ]
+          }
+        }
+      },
+      "nine": {
+        "webapi_modules": 36,
+        "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+        "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+        "timings": {
+          "clean": {
+            "median_ms": 122.936699,
+            "min_ms": 95.110358,
+            "max_ms": 139.265208,
+            "samples": 10,
+            "block_medians_ms": [
+              129.427742,
+              109.332151
+            ]
+          },
+          "cached": {
+            "median_ms": 47.447342,
+            "min_ms": 45.426585,
+            "max_ms": 60.221221,
+            "samples": 10,
+            "block_medians_ms": [
+              47.624209,
+              47.270475
+            ]
+          },
+          "edit": {
+            "median_ms": 56.9561815,
+            "min_ms": 55.198362,
+            "max_ms": 78.837987,
+            "samples": 10,
+            "block_medians_ms": [
+              58.312315,
+              56.925371
+            ]
+          }
+        }
+      },
+      "fifteen": {
+        "webapi_modules": 36,
+        "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+        "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+        "timings": {
+          "clean": {
+            "median_ms": 107.59863250000001,
+            "min_ms": 98.708533,
+            "max_ms": 147.936732,
+            "samples": 10,
+            "block_medians_ms": [
+              104.564023,
+              110.633242
+            ]
+          },
+          "cached": {
+            "median_ms": 45.298938500000006,
+            "min_ms": 37.171238,
+            "max_ms": 57.158826,
+            "samples": 10,
+            "block_medians_ms": [
+              46.980059,
+              45.284609
+            ]
+          },
+          "edit": {
+            "median_ms": 61.7926585,
+            "min_ms": 47.806526,
+            "max_ms": 70.409247,
+            "samples": 10,
+            "block_medians_ms": [
+              64.091813,
+              59.493504
+            ]
+          }
+        }
+      }
+    },
+    "cssom": {
+      "original": {
+        "webapi_modules": 17,
+        "webapi_fingerprint": "cd3405819664af46c4dcbe517a0a5be38f1c3cab9db3ee516cb4ac1cebb08fee",
+        "webapi_snapshot": "625b8687db9f30cd4510584e641bb5718361610f",
+        "timings": {
+          "clean": {
+            "median_ms": 92.894388,
+            "min_ms": 78.605538,
+            "max_ms": 118.085666,
+            "samples": 10,
+            "block_medians_ms": [
+              86.842016,
+              97.215174
+            ]
+          },
+          "cached": {
+            "median_ms": 43.418748,
+            "min_ms": 35.999716,
+            "max_ms": 59.558143,
+            "samples": 10,
+            "block_medians_ms": [
+              37.831061,
+              45.507272
+            ]
+          },
+          "edit": {
+            "median_ms": 61.68920850000001,
+            "min_ms": 48.733292,
+            "max_ms": 73.515211,
+            "samples": 10,
+            "block_medians_ms": [
+              57.097122,
+              62.665066
+            ]
+          }
+        }
+      },
+      "six": {
+        "webapi_modules": 17,
+        "webapi_fingerprint": "0e182d9fc11aa09a8435100e8b855d1f8e10936cf514418c1f81db4e1c456972",
+        "webapi_snapshot": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+        "timings": {
+          "clean": {
+            "median_ms": 133.251556,
+            "min_ms": 115.514543,
+            "max_ms": 145.341291,
+            "samples": 10,
+            "block_medians_ms": [
+              129.95303,
+              133.401407
+            ]
+          },
+          "cached": {
+            "median_ms": 45.3368655,
+            "min_ms": 38.911907,
+            "max_ms": 53.486415,
+            "samples": 10,
+            "block_medians_ms": [
+              45.588145,
+              45.085586
+            ]
+          },
+          "edit": {
+            "median_ms": 60.624891,
+            "min_ms": 59.312749,
+            "max_ms": 86.567054,
+            "samples": 10,
+            "block_medians_ms": [
+              60.329455,
+              61.986276
+            ]
+          }
+        }
+      },
+      "nine": {
+        "webapi_modules": 18,
+        "webapi_fingerprint": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+        "webapi_snapshot": "111c6d62b701c2b3082517575e76167341318867",
+        "timings": {
+          "clean": {
+            "median_ms": 100.5476445,
+            "min_ms": 83.682826,
+            "max_ms": 132.560437,
+            "samples": 10,
+            "block_medians_ms": [
+              92.468249,
+              116.897766
+            ]
+          },
+          "cached": {
+            "median_ms": 42.9688485,
+            "min_ms": 34.530224,
+            "max_ms": 58.182407,
+            "samples": 10,
+            "block_medians_ms": [
+              39.742127,
+              46.271781
+            ]
+          },
+          "edit": {
+            "median_ms": 64.151529,
+            "min_ms": 52.159566,
+            "max_ms": 74.595513,
+            "samples": 10,
+            "block_medians_ms": [
+              55.565271,
+              65.001414
+            ]
+          }
+        }
+      },
+      "fifteen": {
+        "webapi_modules": 17,
+        "webapi_fingerprint": "de9a938ec0d196dd0da1553a4f9c1346f8c3fe22d5488e6b9d063ce1e81ae118",
+        "webapi_snapshot": "01db7c05115a48700cc61623e894a46546858d0c",
+        "timings": {
+          "clean": {
+            "median_ms": 99.214546,
+            "min_ms": 83.631014,
+            "max_ms": 147.235408,
+            "samples": 10,
+            "block_medians_ms": [
+              100.566761,
+              97.862331
+            ]
+          },
+          "cached": {
+            "median_ms": 46.7756975,
+            "min_ms": 35.989104,
+            "max_ms": 57.022215,
+            "samples": 10,
+            "block_medians_ms": [
+              49.196807,
+              46.213206
+            ]
+          },
+          "edit": {
+            "median_ms": 62.0286225,
+            "min_ms": 50.232582,
+            "max_ms": 67.505231,
+            "samples": 10,
+            "block_medians_ms": [
+              61.400647,
+              63.903403
+            ]
+          }
+        }
+      }
+    }
+  }
+}

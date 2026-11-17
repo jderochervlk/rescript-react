@@ -189,7 +189,7 @@ def parse_args():
     parser.add_argument("--runs", type=int, default=5)
     parser.add_argument("--source-ref", help="Read baseline sources/config from this Git revision")
     parser.add_argument("--webapi-source-ref", help="Declared source revision for a non-Git WebAPI snapshot")
-    parser.add_argument("--probe", choices=("dom", "location", "url", "fetch"), help="Benchmark a tiny non-React consumer")
+    parser.add_argument("--probe", choices=("dom", "location", "url", "fetch", "cssom"), help="Benchmark a tiny non-React consumer")
     args = parser.parse_args()
     if args.runs < 1 or Path(args.scenario).name != args.scenario or args.scenario in (".", ".."):
         parser.error("Use a simple scenario name and a positive run count")

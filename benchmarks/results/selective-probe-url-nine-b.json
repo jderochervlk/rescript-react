@@ -1,0 +1,175 @@
+{
+  "scenario": "selective-probe-url-nine-b",
+  "compiler": "13.0.0-alpha.7",
+  "recorded_at": "2026-11-16T17:15:02-0500",
+  "react_commit": "6be1cf10cd6445c5a1047c8b76c53e80a258cf9f",
+  "source_ref": null,
+  "probe": "url",
+  "platform": "Linux-7.2.9-1-MANJARO-x86_64-with-glibc2.44",
+  "cpu_count": 8,
+  "node": "v24.16.0",
+  "npm": "11.15.0",
+  "webapi": "/home/josh/Dev/experimental-rescript-webapi",
+  "features": [
+    "WebAPI.URL"
+  ],
+  "sources": {
+    "src/Probe.res": "67ab12d7bc75cdc9d739f1e0312a294eb35ff53a8725fe3cead9727e5c4001bc"
+  },
+  "config": {
+    "name": "webapi-probe",
+    "sources": [
+      "src"
+    ],
+    "package-specs": {
+      "module": "esmodule",
+      "in-source": true
+    },
+    "suffix": ".res.js",
+    "dependencies": [
+      {
+        "name": "@rescript/webapi",
+        "features": [
+          "WebAPI.URL"
+        ]
+      }
+    ]
+  },
+  "webapi_commit": "acf8d6ce07341d5c6c98027b43ac5aaaaf68fac8",
+  "webapi_status": " M docs/content/docs/api-surface.mdx\n M rescript.json\n M scripts/check-features.mjs\n M scripts/consumer-dom-core.res\n M scripts/consumer-dom-reexports.res\n M scripts/fixtures/negative/DOMCollectionCannotBeConstructed.res\n M scripts/fixtures/negative/DOMStyleMapCannotBeConstructed.res\n M scripts/negative-fixtures.json\n M src/core/DOM.res\n M src/cssom/CSSStyleDeclaration.res\n M src/cssom/MediaList.res\n M src/cssom/StylePropertyMap.res\n M src/cssom/StylePropertyMapReadOnly.res\n M src/cssom/StyleSheet.res\n M src/cssom/StyleSheetList.res\n D src/dom-nodes/DOMTree.res\n M src/dom-nodes/HTMLCollection.res\n D src/dom-platform/DOMStringMap.res\n?? scripts/consumer-cssom-types.res\n?? scripts/consumer-dom-tree-disabled.res\n?? scripts/consumer-dom-tree.res\n?? src/cssom-types/\n?? src/dom-tree/\n",
+  "webapi_source_ref": "experiment-selective-dom-types",
+  "webapi_inputs_sha256": "22271512b90fcb9d2a5a905a4218effa1add3ba3399eba3d52accdbe79ff56b7",
+  "samples": [
+    {
+      "iteration": 1,
+      "mode": "clean",
+      "ms": 118.223172,
+      "log": "Cleaned 0/0\nParsed 7 source files\nCompiled 7 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "cached",
+      "ms": 48.591123,
+      "log": "Cleaned 0/7\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 1,
+      "mode": "edit",
+      "ms": 58.43424,
+      "log": "Cleaned 0/7\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "clean",
+      "ms": 89.988371,
+      "log": "Cleaned 0/0\nParsed 7 source files\nCompiled 7 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "cached",
+      "ms": 45.884861,
+      "log": "Cleaned 0/7\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 2,
+      "mode": "edit",
+      "ms": 56.860028,
+      "log": "Cleaned 0/7\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "clean",
+      "ms": 82.836186,
+      "log": "Cleaned 0/0\nParsed 7 source files\nCompiled 7 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "cached",
+      "ms": 48.264853,
+      "log": "Cleaned 0/7\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 3,
+      "mode": "edit",
+      "ms": 55.877505,
+      "log": "Cleaned 0/7\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "clean",
+      "ms": 90.779386,
+      "log": "Cleaned 0/0\nParsed 7 source files\nCompiled 7 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "cached",
+      "ms": 48.807442,
+      "log": "Cleaned 0/7\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 4,
+      "mode": "edit",
+      "ms": 56.934613,
+      "log": "Cleaned 0/7\nParsed 1 source files\nCompiled 1 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "clean",
+      "ms": 84.81764,
+      "log": "Cleaned 0/0\nParsed 7 source files\nCompiled 7 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "cached",
+      "ms": 41.844893,
+      "log": "Cleaned 0/7\nParsed 0 source files\nCompiled 0 modules\n"
+    },
+    {
+      "iteration": 5,
+      "mode": "edit",
+      "ms": 59.060903,
+      "log": "Cleaned 0/7\nParsed 1 source files\nCompiled 1 modules\n"
+    }
+  ],
+  "summary": {
+    "clean": {
+      "median_ms": 89.988371,
+      "min_ms": 82.836186,
+      "max_ms": 118.223172,
+      "mean_ms": 93.328951
+    },
+    "cached": {
+      "median_ms": 48.264853,
+      "min_ms": 41.844893,
+      "max_ms": 48.807442,
+      "mean_ms": 46.6786344
+    },
+    "edit": {
+      "median_ms": 56.934613,
+      "min_ms": 55.877505,
+      "max_ms": 59.060903,
+      "mean_ms": 57.4334578
+    }
+  },
+  "artifacts": {
+    "consumer": {
+      ".cmi": 2,
+      ".cmj": 2,
+      ".ast": 2
+    },
+    "webapi": {
+      ".cmi": 14,
+      ".cmj": 14,
+      ".ast": 12
+    }
+  },
+  "webapi_compiled_modules": [
+    "WebAPI.cmj",
+    "src/core/ArrayBufferTypedArrayOrDataView-WebAPI.cmj",
+    "src/core/DOM-WebAPI.cmj",
+    "src/core/EventType-WebAPI.cmj",
+    "src/url/URL-WebAPI.cmj",
+    "src/url/URLSearchParams-WebAPI.cmj",
+    "src/url/UrlTypes-WebAPI.cmj"
+  ]
+}
