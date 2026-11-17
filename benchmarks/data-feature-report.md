@@ -11,6 +11,10 @@ Clipboard data is nullable, touch getters return TouchList, and the local
 FormData wrapper shares WebAPI.FormData.t while retaining its boxed variants.
 PR #2 separately owns JSX DOM props and refs on top of that base.
 
+The concurrently added [30-run upstream comparison](current-comparison.md)
+is preserved separately. It measures its own hardened source revision
+`5010c94`, not this 27-module integration; its samples are not pooled here.
+
 ## Same-session timing comparison
 
 Median milliseconds, **10 samples per mode**, pooled from two blocks of five.
