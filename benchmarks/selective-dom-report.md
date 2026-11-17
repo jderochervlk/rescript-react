@@ -1,19 +1,20 @@
-# Deeper DOM reduction experiment
+# Selective DOM reduction
 
-## Recommendation
+## Selected layout
 
-Prefer the **15-module selective feature layout** over the published six-module
-consolidation. It provides essentially the same React clean-build time in this
+PR #1 uses the **15-module selective feature layout**, replacing the earlier
+six-module consolidation. It provides essentially the same React clean-build time in this
 sample without putting the rich DOM-tree and CSS records into basic DOM.
 
-This is an **unpublished local experiment**, not an update to PR #1, #2, or WebAPI
-#415. The current React branch is `experiment/selective-dom-profile`; the matching
-WebAPI branch is `experiment/selective-css-modules`, commit
-`81ac4eebeae3ff0cc9118e7b4b62323e3cee9729`.
+This layout is adopted in [React PR #1](https://github.com/jderochervlk/rescript-react/pull/1)
+and its [JsxDOM follow-up](https://github.com/jderochervlk/rescript-react/pull/2).
+The prerequisite is [WebAPI PR #415](https://github.com/rescript-lang/experimental-rescript-webapi/pull/415),
+stacked on the History/Location work in #413. React pins WebAPI commit
+`81ac4eebeae3ff0cc9118e7b4b62323e3cee9729` through an exact public archive.
 
-The experiment's package manifest deliberately links the local WebAPI checkout.
-Do not publish that machine-local dependency declaration. Adoption would pin a
-published candidate commit and update both React PRs together.
+The measurements used local source-folder links, not the archive install. The
+portable dependency pin makes the PRs reproducible without a machine-local path.
+No new timings are claimed for the separate JsxDOM-removal code in PR #2.
 
 ## What changed this time
 
@@ -67,11 +68,11 @@ Document, and MediaQueryList operation modules remain excluded until selected.
 | Label | Layout |
 | --- | --- |
 | `original` | Original 59-module selection; WebAPI `625b8687`, React `e549ebf` |
-| `six` | Published six-module consolidation; WebAPI `acf8d6ce`, React `6be1cf1` |
+| `six` | Earlier six-module consolidation; WebAPI `acf8d6ce`, React `6be1cf1` |
 | `nine` | Basic DOM restored, rich DOMTree separately selected, CSS records extracted into CSSOMTypes |
 | `fifteen` | Basic DOM restored, rich DOMTree selected with seven intact CSS declaration modules |
 
-The nine-module implementation is retained locally at WebAPI commit `4e2d1224`.
+The nine-module implementation is retained in WebAPI history at commit `4e2d1224`.
 The final fifteen-module implementation avoids the additional CSS extraction/
 aliasing layer, keeping the original CSS definitions and public module set.
 
@@ -82,7 +83,7 @@ Wall-clock milliseconds, median of **10 samples per mode**:
 | Layout | WebAPI source modules | Clean | Cached no-op | Single-file rebuild |
 | --- | ---: | ---: | ---: | ---: |
 | Original | 59 | 196.98 | 50.21 | 79.67 |
-| Published consolidation | 6 | 121.48 | 45.92 | 64.19 |
+| Earlier consolidation | 6 | 121.48 | 45.92 | 64.19 |
 | Extracted type features | 9 | 124.96 | 46.02 | 69.90 |
 | **Selective intact modules** | **15** | **122.27** | **45.54** | **70.03** |
 
@@ -165,13 +166,19 @@ Raw data:
 The measured nine- and fifteen-module source-tree identifiers are respectively
 `111c6d62b701c2b3082517575e76167341318867` and
 `01db7c05115a48700cc61623e894a46546858d0c`. Their compiled source inputs correspond
-to local commits `4e2d1224` and `81ac4eeb`; the latter adds only test-fixture cleanup
+to commits `4e2d1224` and `81ac4eeb`; the latter adds only test-fixture cleanup
 after the snapshot. Fingerprints identify actual compiled inputs independently of
 those Git metadata differences.
 
-To work on this experimental checkout, select the matching local WebAPI branch and
-run `npm install --ignore-scripts`, then `npm run build`. The experimental manifest
-contains the local folder link; published branches still use their portable pins.
+For a normal checkout, run `npm ci`, then `npm run build`. To work with a local
+WebAPI checkout at the matching revision without changing the committed pin:
+
+```sh
+npm install --no-save --package-lock=false /path/to/selective-webapi
+```
+
+The benchmark harness independently links whichever folder is supplied through
+`--webapi`. Reinstall from the lockfile to restore the portable dependency.
 
 Benchmark examples, using separate baseline/candidate folders and unused names:
 
@@ -209,11 +216,12 @@ For the recommended fifteen-module variant:
 - Independent static review found no concrete feature or compatibility defect.
 - Live editor interaction was not manually checked.
 
-## Next decision
+## Scope
 
-Recommend replacing the six-module draft with the fifteen-module selective layout,
-then updating PR #1 and its JsxDOM follow-up together. The tradeoff is a larger
+The fifteen-module selective layout replaces the six-module draft in PR #1 and
+is inherited by its JsxDOM follow-up. The tradeoff is a larger
 module count than six, but no bloated basic DOM, no CSS type consolidation, much
 smaller source changes, and comparable React build performance.
 
-The published PRs have deliberately not been changed by this experiment.
+The PRs remain separate review steps. This update does not remove JsxDOMStyle or
+JsxEvent, and it does not merge any PR into its destination branch.

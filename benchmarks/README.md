@@ -1,15 +1,29 @@
 # WebAPI feature-isolation experiment
 
-This local experimental branch contains a deeper selective alternative. See
-[selective-dom-report.md](selective-dom-report.md) for the recommendation and
-controlled comparisons. The published PRs remain unchanged; the six-module
-report below describes their current version, not this local prototype.
+## Current selection: 15 WebAPI modules
 
-## Core DOM reduction: current PR #1
+PR #1 now uses **DOMTree + History + Location**, compiling **15 WebAPI source
+modules + 9 React modules = 24**. Its dependency is pinned to WebAPI commit
+`81ac4eebeae3ff0cc9118e7b4b62323e3cee9729` in
+[WebAPI PR #415](https://github.com/rescript-lang/experimental-rescript-webapi/pull/415).
+Basic DOM and the seven CSS declaration modules remain unchanged from the
+original library; the feature boundaries select only the needed groups.
 
-PR #1 now includes the core type reduction, using
+See [selective-dom-report.md](selective-dom-report.md) for the primary comparison,
+raw data, tradeoffs, and reproduction instructions. Median clean builds in the
+final ten-sample comparison were 196.98 ms for the original 59-module selection,
+121.48 ms for the six-module consolidation, and 122.27 ms for the selected
+15-module layout. The reduced layouts are effectively tied at this sample size.
+
+PR #2 retains only the separate JsxDOM props/ref removal on top of this base.
+The six-module investigation below is preserved as historical evidence, not the
+current implementation or a new measurement of the follow-up.
+
+## Earlier six-module consolidation (superseded)
+
+The earlier version of PR #1 included the core type consolidation, using
 [WebAPI PR #415](https://github.com/rescript-lang/experimental-rescript-webapi/pull/415)
-stacked on the History/Location work in #413. React selects **DOM + History +
+stacked on the History/Location work in #413. React selected **DOM + History +
 Location**, compiling **6 WebAPI source modules + 9 React source modules = 15**.
 The existing JsxDOM/JsxDOMStyle/JsxEvent aliases remain in this base PR.
 
@@ -63,10 +77,10 @@ non-React consumers show a real cost:
 | Fetch | 36 / 36 | 114.60 ms | 146.15 ms | +27.5% |
 
 These are five-run medians, not a universal compiler performance claim. The
-absolute clean overhead is approximately **24–32 ms**. Raw data for clean,
+absolute clean overhead was approximately **24–32 ms**. Raw data for clean,
 cached, and edited builds is preserved in `results/core-probe-*-before.json`
-and `results/core-probe-*-after.json`. The WebAPI follow-on is a draft so this
-type-ownership/performance tradeoff can be reviewed before landing.
+and `results/core-probe-*-after.json`. This cost motivated the later selective
+layout instead of adopting the consolidated core.
 
 ### Reproduce the core comparison
 
@@ -78,13 +92,14 @@ python3 benchmarks/builds.py core-before-repeat --compiler 13 \
   --webapi /path/to/webapi-before \
   --feature WebAPI.DOMNodes --feature WebAPI.History --feature WebAPI.Location
 python3 benchmarks/builds.py core-after-repeat --compiler 13 \
+  --source-ref 6be1cf10cd6445c5a1047c8b76c53e80a258cf9f \
   --webapi /path/to/webapi-after \
   --feature WebAPI.DOM --feature WebAPI.History --feature WebAPI.Location
 python3 benchmarks/builds.py core-dom-probe-repeat --compiler 13 \
   --probe dom --webapi /path/to/webapi-after --feature WebAPI.DOM
 ```
 
-Probe choices are `dom`, `location`, `url`, and `fetch`. For a source archive
+Probe choices are `dom`, `location`, `url`, `fetch`, and `cssom`. For a source archive
 rather than a Git checkout, add `--webapi-source-ref <commit>` to record its
 provenance. The harness refuses to mistake an enclosing repository's HEAD for
 the WebAPI revision. Every run also fingerprints the actual source inputs.
