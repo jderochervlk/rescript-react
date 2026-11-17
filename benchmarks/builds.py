@@ -61,7 +61,12 @@ def copy_probe(fixture, probe):
 
 
 def prepare_fixture(args):
-    fixture = ROOT / "node_modules" / ".webapi-benchmark" / args.scenario
+    fixture_root = (
+        Path(args.fixture_root).resolve()
+        if args.fixture_root
+        else ROOT / "node_modules" / ".webapi-benchmark"
+    )
+    fixture = fixture_root / args.scenario
     if fixture.exists():
         raise RuntimeError(f"Fixture already exists: {fixture}; choose a new scenario name")
     fixture.mkdir(parents=True)
@@ -187,6 +192,10 @@ def parse_args():
     )
     selection.add_argument("--feature", action="append", help="Select a public feature; repeat to combine")
     parser.add_argument("--runs", type=int, default=5)
+    parser.add_argument(
+        "--fixture-root",
+        help="Disposable fixture parent; use a directory outside this project for v12, which cannot parse an ancestor's feature dependencies",
+    )
     parser.add_argument("--source-ref", help="Read baseline sources/config from this Git revision")
     parser.add_argument("--webapi-source-ref", help="Declared source revision for a non-Git WebAPI snapshot")
     parser.add_argument("--probe", choices=("dom", "location", "url", "fetch", "cssom"), help="Benchmark a tiny non-React consumer")
@@ -221,6 +230,7 @@ def metadata_for(args, fixture):
         "recorded_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "react_commit": run(["git", "rev-parse", "HEAD"], ROOT)[1].strip(),
         "source_ref": args.source_ref,
+        "fixture": str(fixture),
         "probe": args.probe,
         "platform": platform.platform(),
         "cpu_count": os.cpu_count(),
