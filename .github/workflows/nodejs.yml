@@ -26,4 +26,5 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: python3 benchmarks/check-consumer.py
+    - run: npm run test:dom-props
     - run: npm run test

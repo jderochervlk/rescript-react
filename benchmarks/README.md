@@ -57,6 +57,10 @@ final ten-sample comparison were 196.98 ms for the migrated 59-module selection,
 15-module layout. The reduced layouts are effectively tied at this sample size.
 
 PR #2 retains only the separate JsxDOM props/ref removal on top of this base.
+Its new [before/after benchmark report](jsxdom-report.md) measures that change
+against a fresh PR #1 control, with exact source revisions and timestamps:
+clean medians are 182.87 ms before and 208.52 ms after (ten samples each).
+Those measurements are separate from the older layout comparison above.
 The six-module investigation below is preserved as historical evidence, not the
 current implementation or a new measurement of the follow-up.
 
